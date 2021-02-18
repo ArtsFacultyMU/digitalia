@@ -1,0 +1,4 @@
+This directory is used for prepraration of distrib package, that should be
+copied to the remote server with installed Islandora.
+
+Than instalation script should be run.

@@ -1,0 +1,54 @@
+*** To get IPTo get IP:
+$ hostname -I
+
+*** Edit these: 
+/etc/hosts 
+/etc/hostname
+/root/bin/firewall
+
+$ hostnamectl set-hostname <hostname>
+
+
+*** In /etc/cloud/cloud.cfg set
+preserve_hostname: true
+
+*** or 
+
+$ vim lib/cloud/data/set-hostname
+$ vim lib/cloud/seed/nocloud-net/user-data
+$ cloud-init clean
+$ cloud-init init
+
+
+
+
+/etc/mailname
+$ newaliases
+$ update-ca-certificates
+$ dpkg --purge --force-depends ca-certificates-java
+$ apt-get install ca-certificates-java
+
+*** Edit sites and enable/disable:
+/etc/apache2/
+
+*** If Let's Encrypt was installed using snap:
+$ snap remove certbot
+$ rm /usr/bin/certbot
+
+*** Edit:
+/etc/postfix/main.cf
+
+
+*** After reboot:
+
+*** SSH server keys update:
+$ rm -v /etc/ssh/ssh_host_*
+$ dpkg-reconfigure openssh-server
+
+
+$ dpkg-reconfigure debconf
+$ for pkg in $(dpkg-query --show | awk '{print $1}'); do echo ; echo "--> $pkg" ; echo ; dpkg-reconfigure --frontend=noninteractive --priority=critical $pkg < /dev/null ; done
+
+
+*** Islandora etc.
+

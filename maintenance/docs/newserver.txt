@@ -1,0 +1,29 @@
+1i. Ask CIT FF to clone "ubuntu-for-islandora" VM
+- the IP and network should be set according to intended purpose of the server
+
+2<server>. Change hostname and set up firewall
+# hostnamectl set-hostname <hostname>
+# sed -i 's/preserve_hostname: false/preserve_hostname: true/' /etc/cloud/cloud.cfg
+# mv /etc/apt/apt.conf.d/90curtin-aptproxy /root/
+# sed -i 's/10.16.30.213/<ip>' /root/bin/firewall
+# systemctl daemon-reload
+# systemctl enable firewall.service
+# systemctl start firewall.service
+
+3<local>. ready for Islandora (use remote install via playbook)
+$ git clone https://github.com/Islandora-Devops/islandora-playbook.git
+$ cd islandora-playbook
+$ cp -r inventory/vagrant inventory/production
+$ ~/bin/islandora-remote-setup
+$ sed -i "s/\(login_.*\)/#\1/" roles/external/Islandora-Devops.fcrepo/tasks/db-mysql.yml
+$ ansible-playbook -i inventory/production playbook.yml -e "islandora_distro=ubuntu/bionic64"
+$ cd islandora-maintanance
+$ scp distrib/* root@<server>:bin/
+
+3a<local>. if reinstall the same playbook, clear cache
+$ rm -rf roles/external
+
+
+4<server>. Islandora security setup
+# aptitude install tripwire
+# 

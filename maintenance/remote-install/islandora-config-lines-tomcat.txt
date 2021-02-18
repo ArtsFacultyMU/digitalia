@@ -1,0 +1,4 @@
+
+fcrepo_allowed_external_content:
+  - http://example.org/
+cantaloupe_HttpResolver_BasicLookupStrategy_url_prefix: http://example.org/

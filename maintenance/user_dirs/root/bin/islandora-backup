@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DRUPAL_DIR=/var/www/html/drupal
+DRUSH_BIN=/usr/local/bin/drush
+BACKUP_DIR=/root/backup
+
+$DRUSH_BIN --root=$DRUPAL_DIR config:export --destination=$BACKUP_DIR/config-$(date '+%Y%m%d')
+
+$DRUSH_BIN --root=$DRUPAL_DIR sql:dump --extra-dump=--no-tablespaces --result-file=$BACKUP_DIR/dan-$(date '+%Y%m%d').sql
+
+rsync -a --delete --exclude='drupal/vendor/' $DRUPAL_DIR $BACKUP_DIR
+
+tar --exclude-vcs-ignores --exclude=/var/www/html/drupal/web/sites/default/files -cjf $BACKUP_DIR/www-$(date "+%Y%m%d").tar.bz2 /var/www/html/ 
+

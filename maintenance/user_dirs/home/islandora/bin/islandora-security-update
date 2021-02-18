@@ -1,0 +1,35 @@
+#!/bin/bash
+
+RUNAS='islandora'
+
+if [ "$(whoami)" != "$RUNAS" ]; then
+	echo "Script must be run as user: $RUNAS"
+	exit 255
+fi
+
+
+MAILS="kic_admins@ics.muni.cz,strakosova@phil.muni.cz"
+today=`date +%Y-%m-%d.%H:%M:%S`
+
+COMPOSER_BIN=/usr/local/bin/composer
+DRUSH_BIN=/usr/local/bin/drush
+DRUPAL_DIR=/var/www/html/drupal
+LOGFILE=/home/islandora/logs/update-$(date '+%Y-%m-%d_%T').log
+
+echo "Composer update"
+echo "---------------"
+$COMPOSER_BIN --working-dir=${DRUPAL_DIR} update |& tee "$LOGFILE"
+
+echo "Drush updatedb"
+echo "-------------"
+$DRUSH_BIN -y --root=${DRUPAL_DIR} updatedb |& tee -a "$LOGFILE" 
+
+echo "Drush cache:rebuild"
+echo "-------------------"
+$DRUSH_BIN --root=${DRUPAL_DIR} cache:rebuild |& tee -a "$LOGFILE"
+
+echo "Composer diagnose"
+echo "-----------------"
+$COMPOSER_BIN --working-dir=${DRUPAL_DIR} diagnose |& tee -a "$LOGFILE"
+
+cat "$LOGFILE" | mutt -s "Drupal update $today" "$MAILS" 

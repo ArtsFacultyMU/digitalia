@@ -1,0 +1,14 @@
+#!/bin/bash
+
+COMPOSER_BIN=/usr/local/bin/composer
+DRUSH_BIN=/usr/local/bin/drush
+DRUPAL_DIR=/var/www/html/drupal
+
+# updates check
+#composer --working-dir=${DRUPAL_DIR} outdated "drupal/*" 
+$COMPOSER_BIN --working-dir=${DRUPAL_DIR} --dry-run update
+$DRUSH_BIN --root=${DRUPAL_DIR} pm:security 
+
+# security reviews modules
+$DRUSH_BIN --root=${DRUPAL_DIR} security-review
+
