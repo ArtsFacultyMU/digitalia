@@ -1,0 +1,20 @@
+uuid: d97ff3c9-7586-4666-bbca-bd89a2319411
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.marc_xml
+id: media.marc_xml.uid
+field_name: uid
+entity_type: media
+bundle: marc_xml
+label: 'Authored by'
+description: 'The user ID of the author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

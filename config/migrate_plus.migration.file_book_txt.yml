@@ -1,0 +1,51 @@
+uuid: 9fcb36d0-6533-43d9-9ce9-93ea0c484876
+langcode: en
+status: true
+dependencies: {  }
+id: file_book_txt
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: arne_novak_media
+label: 'Import Book Text Files'
+source:
+  plugin: csv
+  path: migrate_sources/book_text.csv
+  delimiter: "\t"
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    destination_dir: 'fedora://books/text'
+    repository_url: 'http://arne-novak.phil.muni.cz/repository/'
+    repository_ext: '-def.txt'
+    ext: .txt
+process:
+  filename:
+    plugin: concat
+    source:
+      - id
+      - constants/ext
+  filepath:
+    plugin: concat
+    source:
+      - constants/repository_url
+      - id
+      - constants/repository_ext
+  destination:
+    plugin: concat
+    delimiter: /
+    source:
+      - constants/destination_dir
+      - '@filename'
+  uri:
+    plugin: download
+    source:
+      - '@filepath'
+      - '@destination'
+    file_exists: replace
+destination:
+  plugin: 'entity:file'
+  type: file
+migration_dependencies: null

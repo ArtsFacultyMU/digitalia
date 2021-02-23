@@ -1,0 +1,122 @@
+uuid: ddec22e4-2d58-43f3-b65c-4dc12486ee46
+langcode: cs
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.book.field_author
+    - field.field.node.book.field_citation
+    - field.field.node.book.field_contents
+    - field.field.node.book.field_description
+    - field.field.node.book.field_identifier
+    - field.field.node.book.field_keywords
+    - field.field.node.book.field_member_of
+    - field.field.node.book.field_model
+    - field.field.node.book.field_pid
+    - field.field.node.book.field_published
+    - field.field.node.book.field_publisher
+    - field.field.node.book.field_rights
+    - field.field.node.book.field_sysno
+    - field.field.node.book.field_title_page
+    - field.field.node.book.field_type
+    - node.type.book
+  module:
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+        - field_description
+        - field_keywords
+        - field_published
+        - field_publisher
+        - field_rights
+        - book_citation_book_eva_citation
+      parent_name: ''
+      weight: 27
+      format_type: tabs
+      region: hidden
+      format_settings:
+        direction: vertical
+        id: ''
+        classes: ''
+      label: Metadata
+    group_pdf:
+      children:
+        - pdfjs_media_evas_entity_view_1
+      parent_name: ''
+      weight: 26
+      format_type: details
+      region: hidden
+      format_settings:
+        description: ''
+        open: false
+        id: ''
+        classes: ''
+      label: 'Zobrazit PDF'
+id: node.book.search_result
+targetEntityType: node
+bundle: book
+mode: search_result
+content:
+  book_files_download_entity_view_1:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  eva_ocr_text_entity_view_1:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_author:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  part_citation_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  part_citation_entity_view_2:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  book_citation_book_eva_citation: true
+  book_pages_grid_entity_view_1: true
+  display_media_entity_view_1: true
+  display_media_entity_view_2: true
+  display_media_service_file: true
+  display_media_thumbnail: true
+  field_citation: true
+  field_contents: true
+  field_description: true
+  field_identifier: true
+  field_keywords: true
+  field_member_of: true
+  field_model: true
+  field_pid: true
+  field_published: true
+  field_publisher: true
+  field_rights: true
+  field_sysno: true
+  field_title_page: true
+  field_type: true
+  islandora_fits_checksum: true
+  katalog_muni_url_entity_view_1: true
+  langcode: true
+  links: true
+  openseadragon_media_evas_entity_view_1: true
+  openseadragon_media_evas_entity_view_2: true
+  openseadragon_media_evas_service_file: true
+  pdfjs_media_evas_entity_view_1: true
+  pdfjs_media_evas_entity_view_2: true
+  pdfjs_media_evas_service_file: true
+  search_api_excerpt: true

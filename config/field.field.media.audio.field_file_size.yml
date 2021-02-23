@@ -1,0 +1,28 @@
+uuid: 7e3a21b9-d11d-42c3-ace8-8e231646ce23
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_file_size
+    - media.type.audio
+  enforced:
+    module:
+      - islandora_core_feature
+_core:
+  default_config_hash: vP0SGgHATPIG4wnyKPt_yPp_BbBMFv2QD-c1eSSc_jQ
+id: media.audio.field_file_size
+field_name: field_file_size
+entity_type: media
+bundle: audio
+label: 'File size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

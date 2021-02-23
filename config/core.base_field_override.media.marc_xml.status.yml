@@ -1,0 +1,22 @@
+uuid: 18b8dfe2-72aa-4e4b-b390-1dd6c42d2a68
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.marc_xml
+id: media.marc_xml.status
+field_name: status
+entity_type: media
+bundle: marc_xml
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

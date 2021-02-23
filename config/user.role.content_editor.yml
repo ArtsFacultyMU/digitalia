@@ -1,0 +1,24 @@
+uuid: b8d03ecf-4f1a-4f51-ac1e-0374ea6865f9
+langcode: cs
+status: true
+dependencies: {  }
+id: content_editor
+label: 'Content editor'
+weight: 5
+is_admin: null
+permissions:
+  - 'create book content'
+  - 'create part content'
+  - 'edit any basic_page content'
+  - 'edit any book content'
+  - 'edit any part content'
+  - 'edit own book content'
+  - 'edit own part content'
+  - 'revert basic_page revisions'
+  - 'revert book revisions'
+  - 'revert part revisions'
+  - 'translate block_content'
+  - 'use search_api_autocomplete for search_content'
+  - 'view basic_page revisions'
+  - 'view book revisions'
+  - 'view part revisions'

@@ -1,0 +1,59 @@
+uuid: 8ab61f6e-5a1f-4642-9ca4-89e921877f80
+langcode: en
+status: true
+dependencies: {  }
+id: media_page_scan
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: arne_novak_media
+label: 'Import Page Scan Media'
+source:
+  plugin: csv
+  path: migrate_sources/page_scan.csv
+  delimiter: "\t"
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    ext: .png
+    use: 'Original File'
+    uid: 1
+process:
+  name: id
+  uid: constants/uid
+  field_media_use:
+    plugin: entity_lookup
+    source: constants/use
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: islandora_media_use
+  file:
+    plugin: concat
+    source:
+      - id
+      - constants/ext
+  field_media_image:
+    plugin: entity_lookup
+    source: '@file'
+    entity_type: file
+    value_key: filename
+    bundle: image
+  field_media_of:
+    plugin: entity_lookup
+    source: id
+    entity_type: node
+    value_key: field_identifier
+    bundle_key: type
+    bundle: page
+  changed:
+    plugin: format_date
+    from_format: 'Y-m-d H:i:s'
+    to_format: U
+    source: changed
+destination:
+  plugin: 'entity:media'
+  default_bundle: page_scan
+migration_dependencies: null

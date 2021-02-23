@@ -1,0 +1,18 @@
+uuid: d27af362-3a85-4cd1-ac82-a27648e67927
+langcode: cs
+status: true
+dependencies:
+  enforced:
+    module:
+      - islandora_core_feature
+  module:
+    - islandora
+_core:
+  default_config_hash: mggprUkJ7WPux2lwvNaiJEp73bAvL9o-F7rw44wrguk
+id: index_media_in_fedora
+label: 'Index Media in Fedora'
+type: media
+plugin: emit_media_event
+configuration:
+  queue: islandora-indexing-fcrepo-media
+  event: Aktualizovat

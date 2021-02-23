@@ -1,0 +1,28 @@
+uuid: ce14c663-24eb-47b6-8843-4b6d2fab868b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_of
+    - media.type.illustration
+    - node.type.page
+id: media.illustration.field_media_of
+field_name: field_media_of
+entity_type: media
+bundle: illustration
+label: 'Media of'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

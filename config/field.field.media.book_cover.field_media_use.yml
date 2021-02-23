@@ -1,0 +1,29 @@
+uuid: 4f6313d1-4d9c-4f02-bd1a-0b6863dca1a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_use
+    - media.type.book_cover
+    - taxonomy.vocabulary.islandora_media_use
+id: media.book_cover.field_media_use
+field_name: field_media_use
+entity_type: media
+bundle: book_cover
+label: 'Media Use'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      islandora_media_use: islandora_media_use
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

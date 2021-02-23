@@ -1,0 +1,20 @@
+uuid: 71c0129c-3dd0-4c6b-8844-5054887f8c13
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.page_text
+  module:
+    - path
+id: media.page_text.path
+field_name: path
+entity_type: media
+bundle: page_text
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

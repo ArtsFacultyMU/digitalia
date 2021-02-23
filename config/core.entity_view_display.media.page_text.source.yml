@@ -1,0 +1,34 @@
+uuid: ce5001cc-7954-48de-a765-1da34e0343a5
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.media.source
+    - field.field.media.page_text.field_media_file
+    - field.field.media.page_text.field_media_of
+    - field.field.media.page_text.field_media_use
+    - media.type.page_text
+  module:
+    - file
+id: media.page_text.source
+targetEntityType: media
+bundle: page_text
+mode: source
+content:
+  field_media_file:
+    type: file_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_of: true
+  field_media_use: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

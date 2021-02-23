@@ -1,0 +1,32 @@
+uuid: ae99f612-154e-4e1c-9f7f-0b6a0b0b9aa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.page_text.field_media_file
+    - field.field.media.page_text.field_media_of
+    - field.field.media.page_text.field_media_use
+    - media.type.page_text
+  module:
+    - islandora_text_extraction
+id: media.page_text.default
+targetEntityType: media
+bundle: page_text
+mode: default
+content:
+  field_media_file:
+    type: ocr_formatter
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_of: true
+  field_media_use: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

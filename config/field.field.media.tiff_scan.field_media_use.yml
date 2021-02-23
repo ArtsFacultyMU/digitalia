@@ -1,0 +1,29 @@
+uuid: 2d359c47-11ff-47a9-acd6-aa9aaa53138c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_use
+    - media.type.tiff_scan
+    - taxonomy.vocabulary.islandora_media_use
+id: media.tiff_scan.field_media_use
+field_name: field_media_use
+entity_type: media
+bundle: tiff_scan
+label: 'Media Use'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      islandora_media_use: islandora_media_use
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

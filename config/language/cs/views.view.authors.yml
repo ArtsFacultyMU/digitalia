@@ -1,0 +1,9 @@
+label: 'Seznam autorů děl v digitální knihovně'
+display:
+  page_1:
+    display_options:
+      menu:
+        title: 'Seznam autorů'
+  default:
+    display_options:
+      title: 'Seznam autorů děl v digitální knihovně'

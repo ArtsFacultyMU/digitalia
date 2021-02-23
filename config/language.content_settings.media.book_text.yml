@@ -1,0 +1,18 @@
+uuid: 307ca428-8ccc-484e-b206-d6091888895a
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_text
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: media.book_text
+target_entity_type_id: media
+target_bundle: book_text
+default_langcode: site_default
+language_alterable: false

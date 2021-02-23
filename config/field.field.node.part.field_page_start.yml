@@ -1,0 +1,28 @@
+uuid: b9cbd35e-bcb6-4074-8037-cf09717a6580
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_start
+    - node.type.page
+    - node.type.part
+id: node.part.field_page_start
+field_name: field_page_start
+entity_type: node
+bundle: part
+label: 'Page (start)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

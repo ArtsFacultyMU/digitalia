@@ -1,0 +1,20 @@
+uuid: fd11e19a-9f3e-4578-815a-373fc5f5ed5e
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_pdf
+id: media.book_pdf.uid
+field_name: uid
+entity_type: media
+bundle: book_pdf
+label: 'Authored by'
+description: 'The user ID of the author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

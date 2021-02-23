@@ -1,0 +1,18 @@
+uuid: 56f8c0f3-4775-4347-a59d-4e131e6f7d22
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_text
+id: media.book_text.changed
+field_name: changed
+entity_type: media
+bundle: book_text
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,14 @@
+uuid: 9a353002-50e0-4b0b-a0e7-d254388de326
+langcode: cs
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 4
+is_admin: null
+permissions:
+  - 'edit any basic_page content'
+  - 'edit own basic_page content'
+  - 'update content translations'
+  - 'use text format basic_html'
+  - 'view basic_page revisions'

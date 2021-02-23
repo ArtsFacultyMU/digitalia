@@ -1,0 +1,16 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h4>Current entries:</h4>\r\n"
+            format: basic_html
+      fields:
+        nothing:
+          alter:
+            text: "{% if type == 'Page' %}\r\n   Number of pages:\r\n{% elseif type == 'Part' %}\r\n   Number of parts of works:\r\n{% else %}\r\n   Number of works:\r\n{% endif %}\r\n"
+        type:
+          alter:
+            text: 'Number of works:'
+      title: 'Current entries'

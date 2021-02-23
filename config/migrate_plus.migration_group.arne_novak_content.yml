@@ -1,0 +1,10 @@
+uuid: 7e40e605-1418-42ef-9995-a2af3113d6d0
+langcode: en
+status: true
+dependencies: {  }
+id: arne_novak_content
+label: arne_novak_content
+description: ''
+source_type: null
+module: null
+shared_configuration: null

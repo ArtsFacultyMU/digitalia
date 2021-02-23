@@ -1,0 +1,16 @@
+rest_oai_pmh:
+  entity_type: node
+view_displays:
+  'oai_pmh:titles': 'oai_pmh:titles'
+support_sets: 1
+mapping_source: rdf
+repository_name: 'Digitální knihovna Arne Nováka'
+repository_email: admin@example.com
+expiration: '3600'
+metadata_map_plugins:
+  oai_dc: dublin_core_rdf
+  oai_raw: ''
+_core:
+  default_config_hash: bzVgxAW8qL_RR1YMiABMUohoPHQnkYmISP5yyKAF0Qc
+langcode: cs
+cache_technique: liberal_cache

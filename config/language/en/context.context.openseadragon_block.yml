@@ -1,0 +1,4 @@
+label: 'Paged Content - Openseadragon'
+conditions:
+  node_has_term:
+    uri: 'http://openseadragon.github.io,https://schema.org/Book'

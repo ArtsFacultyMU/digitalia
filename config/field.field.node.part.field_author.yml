@@ -1,0 +1,32 @@
+uuid: db619619-d173-423b-8a20-eb998e0dfe4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.author
+    - node.type.part
+  content:
+    - 'node:author:72e5493a-d64d-4643-bd74-d42a90ef8ddf'
+id: node.part.field_author
+field_name: field_author
+entity_type: node
+bundle: part
+label: Author
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 72e5493a-d64d-4643-bd74-d42a90ef8ddf
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      author: author
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

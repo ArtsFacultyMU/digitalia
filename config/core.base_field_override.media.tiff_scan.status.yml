@@ -1,0 +1,22 @@
+uuid: 7a99c137-f745-4b13-849c-b91b0723baef
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.tiff_scan
+id: media.tiff_scan.status
+field_name: status
+entity_type: media
+bundle: tiff_scan
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

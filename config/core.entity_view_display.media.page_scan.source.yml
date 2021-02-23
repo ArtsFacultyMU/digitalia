@@ -1,0 +1,36 @@
+uuid: e989dd0e-ad1a-4054-bf7d-6e8fbbe38bf5
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.media.source
+    - field.field.media.page_scan.field_media_image
+    - field.field.media.page_scan.field_media_of
+    - field.field.media.page_scan.field_media_use
+    - image.style.max_650x650
+    - media.type.page_scan
+  module:
+    - image
+id: media.page_scan.source
+targetEntityType: media
+bundle: page_scan
+mode: source
+content:
+  field_media_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: max_650x650
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_of: true
+  field_media_use: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

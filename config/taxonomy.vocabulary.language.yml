@@ -1,0 +1,10 @@
+uuid: 2744f058-767a-4a79-8cba-c5b0a74a340a
+langcode: cs
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8KAllLbSPC7wkwMZ_mtJsxrV45Gs5ojJ7tbrjZcXtZw
+name: Jazyk
+vid: language
+description: 'Language of the work'
+weight: 0

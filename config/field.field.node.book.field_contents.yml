@@ -1,0 +1,28 @@
+uuid: debed815-3d5f-475f-8c9a-a38d5b65945d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contents
+    - node.type.book
+    - node.type.page
+id: node.book.field_contents
+field_name: field_contents
+entity_type: node
+bundle: book
+label: Contents
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

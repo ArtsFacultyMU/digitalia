@@ -1,0 +1,27 @@
+uuid: 01913324-cb2f-4946-93eb-b10c6b1cebc1
+langcode: cs
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - carapace
+_core:
+  default_config_hash: MQCbptHnFfYdy1IVfwJ8HdZOb1_Dk3gxbdi7VAM3U0E
+id: carapace_tools
+theme: carapace
+region: leaderboard
+weight: -17
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

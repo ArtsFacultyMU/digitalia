@@ -1,0 +1,20 @@
+uuid: af500747-5c0d-4ce2-9839-58e3e5b3cbfc
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.illustration
+  module:
+    - path
+id: media.illustration.path
+field_name: path
+entity_type: media
+bundle: illustration
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

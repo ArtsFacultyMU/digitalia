@@ -1,0 +1,20 @@
+uuid: ba0cd158-416a-42e8-837c-0f83154e0d35
+langcode: cs
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.resource_types
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: gy9shP9s9yiWw3M06HQAMxq3XFJGK1c8gzpKCjDD79M
+id: taxonomy_term.resource_types
+target_entity_type_id: taxonomy_term
+target_bundle: resource_types
+default_langcode: site_default
+language_alterable: false

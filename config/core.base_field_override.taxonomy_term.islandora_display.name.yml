@@ -1,0 +1,18 @@
+uuid: 00ee7213-f053-4e24-9f48-e5638de5297f
+langcode: cs
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.islandora_display
+id: taxonomy_term.islandora_display.name
+field_name: name
+entity_type: taxonomy_term
+bundle: islandora_display
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

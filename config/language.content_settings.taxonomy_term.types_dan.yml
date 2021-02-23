@@ -1,0 +1,18 @@
+uuid: 1908f74a-d50d-42e4-80a9-dee06dfddd7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.types_dan
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.types_dan
+target_entity_type_id: taxonomy_term
+target_bundle: types_dan
+default_langcode: site_default
+language_alterable: false

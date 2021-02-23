@@ -1,0 +1,8 @@
+algos:
+  sha1: sha1
+  md5: '0'
+  sha256: '0'
+dedupe: false
+_core:
+  default_config_hash: AgYuk3DOXEMx08W2TygZ1ghETsVKIonuVkVMuNoQks0
+langcode: cs

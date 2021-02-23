@@ -1,0 +1,14 @@
+display:
+  default:
+    display_options:
+      fields:
+        field_weight_value:
+          alter:
+            text: 'Titulní strana'
+        field_weight_value_1:
+          alter:
+            text: 'Stránka s obsahem'
+        nothing:
+          alter:
+            text: '<a href=/node/{{ nid }}>Přehled o díle</a>'
+      title: 'Rychlé odkazy'

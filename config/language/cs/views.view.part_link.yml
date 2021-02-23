@@ -1,0 +1,7 @@
+display:
+  default:
+    display_options:
+      fields:
+        field_page_pdf_value:
+          alter:
+            text: 'Otevřít v PDF'

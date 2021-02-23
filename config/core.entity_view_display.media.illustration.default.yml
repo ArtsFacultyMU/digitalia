@@ -1,0 +1,57 @@
+uuid: fdedda26-0757-4627-a4e3-f1d762f8f77e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.illustration.field_media_image
+    - field.field.media.illustration.field_media_of
+    - field.field.media.illustration.field_media_use
+    - media.type.illustration
+  module:
+    - image
+    - user
+id: media.illustration.default
+targetEntityType: media
+bundle: illustration
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 0
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_media_use:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  thumbnail:
+    type: image
+    weight: 5
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+  uid:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_media_image: true
+  field_media_of: true
+  langcode: true
+  name: true
+  search_api_excerpt: true

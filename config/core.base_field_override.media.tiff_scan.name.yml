@@ -1,0 +1,20 @@
+uuid: 0e912bd8-8a4b-4ee7-99a1-368f783b2883
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.tiff_scan
+id: media.tiff_scan.name
+field_name: name
+entity_type: media
+bundle: tiff_scan
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,73 @@
+uuid: fe644451-45d0-4e2c-bb95-b6280fa7c20d
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.field_book
+    - field.field.node.page.field_identifier
+    - field.field.node.page.field_member_of
+    - field.field.node.page.field_model
+    - field.field.node.page.field_page_no
+    - field.field.node.page.field_rights
+    - field.field.node.page.field_subtitle
+    - field.field.node.page.field_weight
+    - node.type.page
+  module:
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_link:
+      children: {  }
+      parent_name: ''
+      weight: 25
+      format_type: tabs
+      region: hidden
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Link
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  display_media_service_file:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  page_link_entity_view_1:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  display_media_entity_view_1: true
+  display_media_entity_view_2: true
+  display_media_thumbnail: true
+  eva_ocr_text_entity_view_1: true
+  field_book: true
+  field_identifier: true
+  field_member_of: true
+  field_model: true
+  field_page_no: true
+  field_rights: true
+  field_subtitle: true
+  field_weight: true
+  islandora_fits_checksum: true
+  langcode: true
+  links: true
+  openseadragon_media_evas_entity_view_1: true
+  openseadragon_media_evas_entity_view_2: true
+  openseadragon_media_evas_service_file: true
+  page_files_download_entity_view_1: true
+  page_link_to_self_entity_view_1: true
+  page_links_page_and_book_entity_view_1: true
+  page_thumbnail_entity_view_1: true
+  pdfjs_media_evas_entity_view_1: true
+  pdfjs_media_evas_entity_view_2: true
+  pdfjs_media_evas_service_file: true
+  search_api_excerpt: true

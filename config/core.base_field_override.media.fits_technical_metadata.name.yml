@@ -1,0 +1,20 @@
+uuid: 75ab2fdc-327d-4984-a966-c9864ed2e46d
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.fits_technical_metadata
+id: media.fits_technical_metadata.name
+field_name: name
+entity_type: media
+bundle: fits_technical_metadata
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+display:
+  default:
+    display_options:
+      fields:
+        field_book:
+          alter:
+            text: 'v <a href=/node/{{ field_book_1 }}>{{ field_book }}</a>'
+        title:
+          alter:
+            text: '<a href=/node/{{ nid }}>{{ title }}</a>'
+      title: 'Přehled titulů'
+      header:
+        result:
+          content: 'Zobrazují se záznamy @start–@end z celkového počtu @total'
+      pager:
+        options:
+          tags:
+            previous: '‹ Předchozí'
+            next: 'Další ›'
+            first: '« První'
+            last: 'Poslední »'

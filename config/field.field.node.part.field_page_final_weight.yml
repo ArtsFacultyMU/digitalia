@@ -1,0 +1,23 @@
+uuid: c2711eb8-e92a-4720-bcf5-a96cdd862bdb
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_final_weight
+    - node.type.part
+id: node.part.field_page_final_weight
+field_name: field_page_final_weight
+entity_type: node
+bundle: part
+label: 'Page Final Weight'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

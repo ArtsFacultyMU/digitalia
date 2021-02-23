@@ -1,0 +1,27 @@
+uuid: 98553062-e9cb-4eaf-9b07-5a522d43a2a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_file
+    - media.type.marc_xml
+  module:
+    - file
+id: media.marc_xml.field_media_file
+field_name: field_media_file
+entity_type: media
+bundle: marc_xml
+label: File
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'txt doc docx pdf'
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

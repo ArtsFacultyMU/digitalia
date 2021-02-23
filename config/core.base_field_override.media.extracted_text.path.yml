@@ -1,0 +1,20 @@
+uuid: 3ba7a4f6-c658-49e4-93c3-6f9b81391dfa
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.extracted_text
+  module:
+    - path
+id: media.extracted_text.path
+field_name: path
+entity_type: media
+bundle: extracted_text
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

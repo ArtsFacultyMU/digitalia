@@ -1,0 +1,4 @@
+label: 'Delete Fedora File from Gemini'
+configuration:
+  queue: islandora-indexing-fcrepo-file-delete
+  event: Delete

@@ -1,0 +1,44 @@
+uuid: 8976a07f-90ea-4c3a-8282-a934a6b174c9
+langcode: cs
+status: true
+dependencies:
+  config:
+    - views.view.book_files_download
+  module:
+    - context
+    - node
+    - views
+  theme:
+    - carapace
+id: views_block__book_files_download_block_1
+theme: carapace
+region: sidebar_second
+weight: -13
+provider: null
+plugin: 'views_block:book_files_download-block_1'
+settings:
+  id: 'views_block:book_files_download-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      book: book
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

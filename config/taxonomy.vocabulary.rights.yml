@@ -1,0 +1,8 @@
+uuid: 4ada6500-62d2-4c4e-b7d4-0d0f2dc55fd5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Rights (DAN)'
+vid: rights
+description: ''
+weight: 0

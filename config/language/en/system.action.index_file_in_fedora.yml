@@ -1,0 +1,4 @@
+label: 'Index Fedora File in Gemini'
+configuration:
+  queue: islandora-indexing-fcrepo-file
+  event: Update

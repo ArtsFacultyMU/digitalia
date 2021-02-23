@@ -1,0 +1,7 @@
+display:
+  default:
+    display_options:
+      fields:
+        field_sysno:
+          alter:
+            text: '<br>Zobrazit v Knihovním katalogu MU'

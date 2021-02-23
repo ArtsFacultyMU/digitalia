@@ -1,0 +1,37 @@
+uuid: 892ed61f-45f3-483d-9c17-16e9f5b87561
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_text
+  module:
+    - image
+id: media.book_text.thumbnail
+field_name: thumbnail
+entity_type: media
+bundle: book_text
+label: Thumbnail
+description: 'The thumbnail of the media item.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: default
+  handler_settings: {  }
+field_type: image

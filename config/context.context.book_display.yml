@@ -1,0 +1,29 @@
+uuid: 289ebd6a-57ed-4556-9b02-6484f427baef
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+name: book_display
+label: 'Book Display'
+group: DAN
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  node_type:
+    id: node_type
+    bundles:
+      book: book
+    negate: false
+    uuid: 7d5c5be5-144a-41a4-aa9b-25baa8f7ed4c
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  blocks:
+    blocks: {  }
+    id: blocks
+    saved: false
+    uuid: 91f3efd5-d66c-4934-8252-46f863032a1b
+    include_default_blocks: 1
+weight: 0

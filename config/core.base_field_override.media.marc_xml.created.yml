@@ -1,0 +1,18 @@
+uuid: 8a4ac82a-2c40-45d7-8ce1-f33d284159f5
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.marc_xml
+id: media.marc_xml.created
+field_name: created
+entity_type: media
+bundle: marc_xml
+label: 'Authored on'
+description: 'The time the media item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

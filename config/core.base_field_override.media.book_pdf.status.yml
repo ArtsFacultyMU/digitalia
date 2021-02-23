@@ -1,0 +1,22 @@
+uuid: e05d260e-443a-4a03-ad8a-44983f33d15c
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_pdf
+id: media.book_pdf.status
+field_name: status
+entity_type: media
+bundle: book_pdf
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

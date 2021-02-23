@@ -1,0 +1,18 @@
+uuid: f90d9a17-9204-452b-baa5-93aa19d659dd
+langcode: cs
+status: true
+dependencies:
+  config:
+    - node.type.basic_page
+id: node.basic_page.title
+field_name: title
+entity_type: node
+bundle: basic_page
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

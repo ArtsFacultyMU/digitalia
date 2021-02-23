@@ -1,0 +1,20 @@
+uuid: b7acc538-3deb-4fed-8217-25b41e1ae896
+langcode: cs
+status: true
+dependencies:
+  config:
+    - node.type.part
+  module:
+    - path
+id: node.part.path
+field_name: path
+entity_type: node
+bundle: part
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

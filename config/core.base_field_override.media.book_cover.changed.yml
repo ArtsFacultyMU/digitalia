@@ -1,0 +1,18 @@
+uuid: 87593ba2-fe48-464c-827c-7699eb7059d1
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_cover
+id: media.book_cover.changed
+field_name: changed
+entity_type: media
+bundle: book_cover
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

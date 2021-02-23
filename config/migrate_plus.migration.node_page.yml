@@ -1,0 +1,55 @@
+uuid: 7dfd44b1-310a-42b0-a875-36acd0b33930
+langcode: en
+status: true
+dependencies: {  }
+id: node_page
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: arne_novak_content
+label: 'Import Page Nodes'
+source:
+  plugin: csv
+  path: migrate_sources/pages.csv
+  delimiter: "\t"
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    uid: 1
+    model: Page
+    lang: cs
+process:
+  title: title
+  uid: constants/uid
+  field_subtitle: subtitle
+  field_identifier: id
+  field_book:
+    plugin: entity_lookup
+    source: book_id
+    entity_type: node
+    value_key: field_identifier
+    bundle_key: type
+    bundle: book
+  field_rights:
+    plugin: entity_generate
+    source: rights
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: rights
+  field_weight: weight
+  field_model:
+    plugin: entity_lookup
+    source: constants/model
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: islandora_models
+  field_page_no: page_no
+  langcode: constants/lang
+destination:
+  plugin: 'entity:node'
+  default_bundle: page
+migration_dependencies: null

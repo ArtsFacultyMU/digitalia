@@ -1,0 +1,37 @@
+uuid: e336eca4-010b-4906-a1bc-590bfb6462bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.book_links
+  module:
+    - context
+    - views
+  theme:
+    - carapace
+id: views_block__book_links_block_1
+theme: carapace
+region: sidebar_second
+weight: -15
+provider: null
+plugin: 'views_block:book_links-block_1'
+settings:
+  id: 'views_block:book_links-block_1'
+  label: Odkazy
+  provider: views
+  label_display: visible
+  views_label: Odkazy
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion:
+      view-book_pages-page_1: view-book_pages-page_1
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }

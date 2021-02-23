@@ -1,0 +1,4 @@
+label: 'PDFjs Viewer'
+conditions:
+  node_has_term:
+    uri: 'http://mozilla.github.io/pdf.js'

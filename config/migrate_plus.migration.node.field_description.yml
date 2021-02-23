@@ -1,0 +1,26 @@
+uuid: 38cd9108-d485-4f0f-a87d-06a54a6251ab
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - islandora
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: 8cYoje9ObIxX1k3ffRc-tWuu3hcddJzy3EHCPlq8JPI
+id: node.field_description
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: null
+label: null
+source: null
+process: null
+destination: null
+migration_dependencies: null

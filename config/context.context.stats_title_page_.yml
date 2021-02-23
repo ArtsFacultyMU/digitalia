@@ -1,0 +1,43 @@
+uuid: 3c96ef8b-c4ca-4022-b237-e9bd954e8a63
+langcode: cs
+status: true
+dependencies:
+  module:
+    - system
+name: stats_title_page_
+label: 'Stats (Title page)'
+group: DAN
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    uuid: b874c35c-50df-4ba6-a1f3-09beac16eebf
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      47c84618-d33b-45e7-b595-2cdd00921d52:
+        id: 'views_block:stats_content-block_2'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: sidebar_second
+        weight: '0'
+        context_mapping: {  }
+        custom_id: views_block_stats_content_block_2
+        theme: carapace
+        css_class: ''
+        unique: 0
+        context_id: stats_title_page_
+        uuid: 47c84618-d33b-45e7-b595-2cdd00921d52
+    id: blocks
+    saved: false
+    uuid: bd472d79-d4ca-4aa8-8a4a-929eba4bbb17
+    include_default_blocks: 1
+weight: 0

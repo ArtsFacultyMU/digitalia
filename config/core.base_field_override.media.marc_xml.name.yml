@@ -1,0 +1,20 @@
+uuid: 3fa2f3db-efc1-45dc-b349-63bd269163df
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.marc_xml
+id: media.marc_xml.name
+field_name: name
+entity_type: media
+bundle: marc_xml
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

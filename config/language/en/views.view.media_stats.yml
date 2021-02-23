@@ -1,0 +1,21 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<h4><span><span><span>F</span></span></span><span><span><span>iles in the digital library:</span></span></span></h4>\r\n"
+            format: basic_html
+      fields:
+        nothing_2:
+          label: 'File type'
+          alter:
+            text: "{% if bundle == 'Book Cover' %}\r\n    Cover\r\n{% elseif bundle == 'Book PDF' %}\r\n    Text of the work in PDF\r\n{% elseif bundle == 'Book Text' %}\r\n    OCR of text of the work\r\n{% elseif bundle == 'MARC XML' %}\r\n    Metadata of the work in MARC XML\r\n{% elseif bundle == 'Page Scan' %}\r\n    Scanned page\r\n{% elseif bundle == 'Page Text' %}\r\n    OCR of text of the page\r\n{% elseif bundle == 'TIFF Scan' %}\r\n    Scanned page in TIFF format\r\n{% endif %}\r\n"
+        nothing_3:
+          label: 'File format'
+          alter:
+            text: "{% if bundle == 'Book Cover' %}\r\n    PNG\r\n{% elseif bundle == 'Book PDF' %}\r\n    PDF\r\n{% elseif bundle == 'Book Text' %}\r\n    TXT\r\n{% elseif bundle == 'MARC XML' %}\r\n    XML\r\n{% elseif bundle == 'Page Scan' %}\r\n    PNG\r\n{% elseif bundle == 'Page Text' %}\r\n    TXT\r\n{% elseif bundle == 'TIFF Scan' %}\r\n    TIFF   \r\n{% endif %}\r\n"
+        nothing:
+          label: 'Number of files'
+        nothing_1:
+          label: 'File size'

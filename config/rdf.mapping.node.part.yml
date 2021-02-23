@@ -1,0 +1,35 @@
+uuid: f065b1a4-e238-4d8e-bb06-509e4b23aeea
+langcode: cs
+status: true
+dependencies:
+  config:
+    - node.type.part
+  enforced:
+    module:
+      - islandora_defaults
+  module:
+    - node
+id: node.part
+targetEntityType: node
+bundle: part
+types:
+  - 'pcdm:Object'
+fieldMappings:
+  title:
+    properties:
+      - 'dcterms:title'
+  field_author:
+    properties:
+      - 'dcterms:contributor'
+  field_published:
+    properties:
+      - 'dcterms:issued'
+  nid:
+    properties:
+      - 'dcterms:identifier'
+  field_citation:
+    properties:
+      - 'dcterms:bibliographicCitation'
+  field_type:
+    properties:
+      - 'dcterms:type'

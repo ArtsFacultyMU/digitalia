@@ -1,0 +1,24 @@
+uuid: 93fd1ec8-6cd7-4874-9bb6-3754613b1f0a
+langcode: cs
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_page_final_weight
+field_name: field_page_final_weight
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

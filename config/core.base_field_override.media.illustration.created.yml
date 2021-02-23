@@ -1,0 +1,18 @@
+uuid: eb279313-e115-4498-9836-e002a7e1e6ae
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.illustration
+id: media.illustration.created
+field_name: created
+entity_type: media
+bundle: illustration
+label: 'Authored on'
+description: 'The time the media item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

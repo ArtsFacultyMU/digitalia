@@ -1,0 +1,18 @@
+uuid: 8daf6adf-da0b-47a7-aa49-fd6ee5400519
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.tiff_scan
+id: media.tiff_scan.created
+field_name: created
+entity_type: media
+bundle: tiff_scan
+label: 'Authored on'
+description: 'The time the media item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

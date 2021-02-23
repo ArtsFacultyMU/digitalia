@@ -1,0 +1,19 @@
+uuid: 3a3f6394-22b0-4e1c-a1ee-b599f915f5a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_from
+    - node.type.part
+id: node.part.field_page_from
+field_name: field_page_from
+entity_type: node
+bundle: part
+label: 'Page (from)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

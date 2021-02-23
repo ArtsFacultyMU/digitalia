@@ -1,0 +1,42 @@
+uuid: a8d83f11-ef6e-453b-b1c2-95ed3856d44f
+langcode: cs
+status: true
+dependencies:
+  module:
+    - context
+    - islandora
+    - system
+  theme:
+    - carapace
+_core:
+  default_config_hash: pXTMmY3T3W2t5JfxrB5UEmrwCFKWQZ5u_rnz1CfcfnQ
+id: carapace_branding
+theme: carapace
+region: header_first
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  media_source_mimetype:
+    id: media_source_mimetype
+    mimetype: ''
+    negate: false
+    context_mapping: {  }

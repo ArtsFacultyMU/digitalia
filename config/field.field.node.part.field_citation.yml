@@ -1,0 +1,21 @@
+uuid: 282de0b5-a107-4b27-92f5-752a16e77af8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_citation
+    - node.type.part
+  module:
+    - text
+id: node.part.field_citation
+field_name: field_citation
+entity_type: node
+bundle: part
+label: Citation
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

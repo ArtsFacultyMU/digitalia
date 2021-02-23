@@ -1,0 +1,25 @@
+uuid: 1851e65c-5748-43b5-b876-480cf8b7c346
+langcode: cs
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'opt-in or out of matomo tracking'
+  - 'post comments'
+  - 'restful get oai_pmh'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use search_api_autocomplete for search_content'
+  - 'use search_api_autocomplete for search_titles_and_authors'
+  - 'use text format basic_html'
+  - 'view field_description'
+  - 'view media'

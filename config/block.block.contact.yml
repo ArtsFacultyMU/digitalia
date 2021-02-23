@@ -1,0 +1,48 @@
+uuid: 4b2631fe-9f76-41e9-b27d-3a3332c2c180
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:026ba73d-d5b0-4a10-bd83-7ab0d9530f41'
+  module:
+    - block_content
+    - context
+    - islandora
+    - system
+  theme:
+    - carapace
+id: contact
+theme: carapace
+region: sidebar_second
+weight: -10
+provider: null
+plugin: 'block_content:026ba73d-d5b0-4a10-bd83-7ab0d9530f41'
+settings:
+  id: 'block_content:026ba73d-d5b0-4a10-bd83-7ab0d9530f41'
+  label: Kontakt
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "/about\r\n/arne-novak\r\n<front>"
+    negate: false
+    context_mapping: {  }
+  media_source_mimetype:
+    id: media_source_mimetype
+    mimetype: ''
+    negate: false
+    context_mapping: {  }

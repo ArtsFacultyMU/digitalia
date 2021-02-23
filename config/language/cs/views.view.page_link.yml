@@ -1,0 +1,7 @@
+display:
+  default:
+    display_options:
+      fields:
+        field_weight_value:
+          alter:
+            text: 'Otevřít {{ field_book_1 }} na straně {{ field_page_no }}'

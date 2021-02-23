@@ -1,0 +1,20 @@
+uuid: 3b4b8415-ae1f-4f7f-bdf4-da69ebf3f596
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_cover
+  module:
+    - path
+id: media.book_cover.path
+field_name: path
+entity_type: media
+bundle: book_cover
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

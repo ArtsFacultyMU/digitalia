@@ -1,0 +1,20 @@
+uuid: 1ead378b-bc48-4ab9-9158-6f759c6a0338
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.tiff_scan
+  module:
+    - path
+id: media.tiff_scan.path
+field_name: path
+entity_type: media
+bundle: tiff_scan
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

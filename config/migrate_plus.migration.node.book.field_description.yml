@@ -1,0 +1,18 @@
+uuid: 35f877a9-358a-4968-a5dc-03bfa8dec640
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.book
+id: node.book.field_description
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: null
+label: Description
+source: null
+process: null
+destination: null
+migration_dependencies: null

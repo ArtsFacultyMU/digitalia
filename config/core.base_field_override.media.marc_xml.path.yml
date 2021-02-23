@@ -1,0 +1,20 @@
+uuid: 12acff74-fd31-49a6-a759-63f78f7373ea
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.marc_xml
+  module:
+    - path
+id: media.marc_xml.path
+field_name: path
+entity_type: media
+bundle: marc_xml
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

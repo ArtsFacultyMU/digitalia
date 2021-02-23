@@ -1,0 +1,22 @@
+uuid: aafabc24-b5ae-4d3d-ad2f-19d810bf974b
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.page_scan
+id: media.page_scan.status
+field_name: status
+entity_type: media
+bundle: page_scan
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

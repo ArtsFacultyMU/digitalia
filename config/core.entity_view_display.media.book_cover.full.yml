@@ -1,0 +1,35 @@
+uuid: 781f7d6d-7f8a-4aa9-aab9-92caf6907ec2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.book_cover.field_media_image
+    - field.field.media.book_cover.field_media_of
+    - field.field.media.book_cover.field_media_use
+    - media.type.book_cover
+  module:
+    - filehash
+id: media.book_cover.full
+targetEntityType: media
+bundle: book_cover
+mode: full
+content:
+  field_media_image:
+    type: filehash_table
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+      algo: sha1
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_of: true
+  field_media_use: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

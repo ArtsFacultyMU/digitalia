@@ -1,0 +1,45 @@
+uuid: ef926aa0-ebf8-44d8-9309-a7fcfdd71ac2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+name: author_display
+label: 'Author Display'
+group: DAN
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  node_type:
+    id: node_type
+    bundles:
+      author: author
+    negate: false
+    uuid: 3236cf25-2e4e-4f96-acee-c7a751b4314c
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  blocks:
+    blocks:
+      de313d3b-93ac-4e88-822f-9d461076c2b3:
+        id: 'views_block:titles_by_author-block_1'
+        label: ''
+        provider: views
+        label_display: '0'
+        views_label: ''
+        items_per_page: none
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        custom_id: views_block_titles_by_author_block_1
+        theme: carapace
+        css_class: ''
+        unique: 0
+        context_id: author_display
+        uuid: de313d3b-93ac-4e88-822f-9d461076c2b3
+    id: blocks
+    saved: false
+    uuid: d0209e7d-115f-4cd1-8693-695d846fbae6
+    include_default_blocks: 1
+weight: 0

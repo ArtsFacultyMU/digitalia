@@ -1,0 +1,22 @@
+uuid: 6ddf24a2-6cab-4a5b-92f3-8b2e0038c31f
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_cover
+id: media.book_cover.status
+field_name: status
+entity_type: media
+bundle: book_cover
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

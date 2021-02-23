@@ -1,0 +1,23 @@
+uuid: ed89cbc3-baf7-4c5b-8f2a-43ebe23fad88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_pdf
+    - node.type.part
+id: node.part.field_page_pdf
+field_name: field_page_pdf
+entity_type: node
+bundle: part
+label: 'Page PDF'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

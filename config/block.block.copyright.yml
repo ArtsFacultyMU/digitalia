@@ -1,0 +1,42 @@
+uuid: 63e395e1-48ba-4e56-885b-ce317e170646
+langcode: cs
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:38887009-c471-471a-b585-6cd041666c28'
+  module:
+    - block_content
+    - context
+    - islandora
+  theme:
+    - carapace
+id: copyright
+theme: carapace
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:38887009-c471-471a-b585-6cd041666c28'
+settings:
+  id: 'block_content:38887009-c471-471a-b585-6cd041666c28'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  media_source_mimetype:
+    id: media_source_mimetype
+    mimetype: ''
+    negate: false
+    context_mapping: {  }

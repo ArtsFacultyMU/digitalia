@@ -1,0 +1,6 @@
+label: 'Page Derivatives'
+conditions:
+  parent_node_has_term:
+    uri: 'http://id.loc.gov/ontologies/bibframe/part'
+  media_has_term:
+    uri: 'http://pcdm.org/use#OriginalFile'

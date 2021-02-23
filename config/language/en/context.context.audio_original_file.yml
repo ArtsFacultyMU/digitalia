@@ -1,0 +1,6 @@
+label: 'Audio Derivatives'
+conditions:
+  media_has_term:
+    uri: 'http://pcdm.org/use#OriginalFile'
+  parent_node_has_term:
+    uri: 'http://purl.org/coar/resource_type/c_18cc'

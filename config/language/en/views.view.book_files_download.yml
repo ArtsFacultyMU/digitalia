@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      title: 'Download work'
+      fields:
+        field_media_file:
+          settings:
+            link_text: 'PDF file ([file:size])'
+        field_media_file_1:
+          settings:
+            link_text: 'OCR text ([file:size])'

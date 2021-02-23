@@ -1,0 +1,33 @@
+uuid: 10bd36a8-e3e1-47cb-9c8e-4e09d4902433
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.open_seadragon
+    - field.field.media.page_scan.field_media_image
+    - field.field.media.page_scan.field_media_of
+    - field.field.media.page_scan.field_media_use
+    - media.type.page_scan
+  module:
+    - openseadragon
+id: media.page_scan.open_seadragon
+targetEntityType: media
+bundle: page_scan
+mode: open_seadragon
+content:
+  field_media_image:
+    type: openseadragon_image
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_of: true
+  field_media_use: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

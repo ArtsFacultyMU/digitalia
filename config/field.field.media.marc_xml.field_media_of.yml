@@ -1,0 +1,28 @@
+uuid: 990db9f8-709b-4b7e-8ba6-ad6cb1f54a8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_of
+    - media.type.marc_xml
+    - node.type.book
+id: media.marc_xml.field_media_of
+field_name: field_media_of
+entity_type: media
+bundle: marc_xml
+label: 'Media of'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      book: book
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

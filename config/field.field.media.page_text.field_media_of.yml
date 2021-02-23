@@ -1,0 +1,28 @@
+uuid: f3dfb410-b0e1-4155-8af5-914a7948ae96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_of
+    - media.type.page_text
+    - node.type.page
+id: media.page_text.field_media_of
+field_name: field_media_of
+entity_type: media
+bundle: page_text
+label: 'Media of'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

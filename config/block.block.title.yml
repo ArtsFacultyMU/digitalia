@@ -1,0 +1,47 @@
+uuid: 9499fe25-1cd5-4c86-888d-fbf4348aa1a9
+langcode: cs
+status: true
+dependencies:
+  config:
+    - facets.facet.dilo
+  module:
+    - condition_query
+    - context
+    - facets
+    - islandora
+  theme:
+    - carapace
+id: title
+theme: carapace
+region: sidebar_second
+weight: -18
+provider: null
+plugin: 'facet_block:dilo'
+settings:
+  id: 'facet_block:dilo'
+  label: 'Filter results by title'
+  provider: facets
+  label_display: visible
+  block_id: title
+visibility:
+  request_param:
+    id: request_param
+    request_param: type=2
+    negate: false
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion:
+      view-search_content-page_1: view-search_content-page_1
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  media_source_mimetype:
+    id: media_source_mimetype
+    mimetype: ''
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,18 @@
+uuid: bea61164-f475-407d-98ab-79c620abe56a
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.tiff_scan
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: media.tiff_scan
+target_entity_type_id: media
+target_bundle: tiff_scan
+default_langcode: site_default
+language_alterable: false

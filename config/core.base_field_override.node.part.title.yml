@@ -1,0 +1,18 @@
+uuid: 20b80e31-688a-4240-a936-2f175b47a3ec
+langcode: cs
+status: true
+dependencies:
+  config:
+    - node.type.part
+id: node.part.title
+field_name: title
+entity_type: node
+bundle: part
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+uuid: baf8abf1-6228-43f4-b82b-47a689251b31
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_pdf
+id: media.book_pdf.changed
+field_name: changed
+entity_type: media
+bundle: book_pdf
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,28 @@
+uuid: 41aa5afa-87f1-46a3-9e73-36fff1a20701
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_of
+    - media.type.tiff_scan
+    - node.type.page
+id: media.tiff_scan.field_media_of
+field_name: field_media_of
+entity_type: media
+bundle: tiff_scan
+label: 'Media of'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

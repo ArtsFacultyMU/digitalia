@@ -1,0 +1,37 @@
+uuid: 67168ca8-91a2-498c-be73-3bc85992d103
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.book_covers
+  module:
+    - context
+    - views
+  theme:
+    - carapace
+id: views_block__book_covers_block_1
+theme: carapace
+region: sidebar_second
+weight: -17
+provider: null
+plugin: 'views_block:book_covers-block_1'
+settings:
+  id: 'views_block:book_covers-block_1'
+  label: Obálka
+  provider: views
+  label_display: visible
+  views_label: Obálka
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion:
+      view-book_pages-page_1: view-book_pages-page_1
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }

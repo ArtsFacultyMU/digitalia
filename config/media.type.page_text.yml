@@ -1,0 +1,13 @@
+uuid: c23e8934-a3bf-4b7c-8d5d-ae1f9f25049c
+langcode: en
+status: true
+dependencies: {  }
+id: page_text
+label: 'Page Text'
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map: {  }

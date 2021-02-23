@@ -1,0 +1,31 @@
+uuid: 3d3fc903-0603-4367-ae95-93cf53224cfc
+langcode: cs
+status: true
+dependencies:
+  module:
+    - context
+    - language
+  theme:
+    - carapace
+id: languageswitcher
+theme: carapace
+region: header_second
+weight: -16
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }

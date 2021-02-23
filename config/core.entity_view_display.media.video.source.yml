@@ -1,0 +1,53 @@
+uuid: 9fcbbd0e-38ab-4724-9fc6-40105ed6924a
+langcode: cs
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.source
+    - field.field.media.video.field_access_terms
+    - field.field.media.video.field_file_size
+    - field.field.media.video.field_media_of
+    - field.field.media.video.field_media_use
+    - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_mime_type
+    - field.field.media.video.field_original_name
+    - media.type.video
+  enforced:
+    module:
+      - islandora_core_feature
+  module:
+    - file
+_core:
+  default_config_hash: 2M-aYtI4eDlwWYDmfUiwO-JnX1MRa4IrqzxzGfZIjls
+id: media.video.source
+targetEntityType: media
+bundle: video
+mode: source
+content:
+  field_media_video_file:
+    type: file_video
+    weight: 0
+    label: visually_hidden
+    settings:
+      muted: false
+      width: 640
+      height: 480
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_access_terms: true
+  field_file_size: true
+  field_media_of: true
+  field_media_use: true
+  field_mime_type: true
+  field_original_name: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

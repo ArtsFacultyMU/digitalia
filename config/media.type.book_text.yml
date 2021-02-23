@@ -1,0 +1,13 @@
+uuid: 38456fdc-6187-4402-a19e-a750ff0b45a0
+langcode: en
+status: true
+dependencies: {  }
+id: book_text
+label: 'Book Text'
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map: {  }

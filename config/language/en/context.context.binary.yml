@@ -1,0 +1,4 @@
+label: Binary
+conditions:
+  node_has_term:
+    uri: 'http://purl.org/coar/resource_type/c_1843'

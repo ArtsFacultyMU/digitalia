@@ -1,0 +1,51 @@
+uuid: bf2e5bfd-69d4-4053-a35d-edd7c99d8749
+langcode: en
+status: true
+dependencies: {  }
+id: file_marc_xml
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: arne_novak_media
+label: 'Import MARC XML Files'
+source:
+  plugin: csv
+  path: migrate_sources/marc_xml.csv
+  delimiter: "\t"
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    destination_dir: 'fedora://books/marc'
+    repository_url: 'http://arne-novak.phil.muni.cz/repository/'
+    repository_ext: '-marc.xml'
+    ext: .xml
+process:
+  filename:
+    plugin: concat
+    source:
+      - id
+      - constants/ext
+  filepath:
+    plugin: concat
+    source:
+      - constants/repository_url
+      - id
+      - constants/repository_ext
+  destination:
+    plugin: concat
+    delimiter: /
+    source:
+      - constants/destination_dir
+      - '@filename'
+  uri:
+    plugin: download
+    source:
+      - '@filepath'
+      - '@destination'
+    file_exists: replace
+destination:
+  plugin: 'entity:file'
+  type: file
+migration_dependencies: null

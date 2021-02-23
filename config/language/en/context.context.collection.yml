@@ -1,0 +1,4 @@
+label: Collection
+conditions:
+  node_has_term:
+    uri: 'http://purl.org/dc/dcmitype/Collection'

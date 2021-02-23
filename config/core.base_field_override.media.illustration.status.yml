@@ -1,0 +1,22 @@
+uuid: 3cecdea4-4e5f-4f2b-9762-979d09f59d07
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.illustration
+id: media.illustration.status
+field_name: status
+entity_type: media
+bundle: illustration
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

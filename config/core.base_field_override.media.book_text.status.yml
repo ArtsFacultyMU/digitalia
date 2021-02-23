@@ -1,0 +1,22 @@
+uuid: f75afa0e-2ac7-47b7-8e6c-173653fb079c
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_text
+id: media.book_text.status
+field_name: status
+entity_type: media
+bundle: book_text
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: 31fd7476-2f14-4a1b-8b21-a7af7ec271e5
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_alternate_name
+    - taxonomy.vocabulary.person
+_core:
+  default_config_hash: u_qBtqnv-blfZ44k-7SeP0JslDmqLNJepFeAdlZR1Yw
+id: taxonomy_term.person.field_alternate_name
+field_name: field_alternate_name
+entity_type: taxonomy_term
+bundle: person
+label: 'Alternate Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

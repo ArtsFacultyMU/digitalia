@@ -1,0 +1,9 @@
+uuid: fcb89dc6-0b80-4d93-b9e4-d08d9c2c350c
+langcode: cs
+status: true
+dependencies: {  }
+id: cs
+label: Čeština
+direction: ltr
+weight: 1
+locked: false

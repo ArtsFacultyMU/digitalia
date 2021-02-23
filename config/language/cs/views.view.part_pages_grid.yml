@@ -1,0 +1,15 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          tags:
+            previous: '‹ Předchozí'
+            next: 'Další ›'
+            first: '« První'
+            last: 'Poslední »'
+      header:
+        area:
+          content:
+            value: "<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+            format: basic_html

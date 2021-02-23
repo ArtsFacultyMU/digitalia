@@ -1,0 +1,42 @@
+uuid: 894a9f34-b6ce-4b55-9a5b-dea41ea21681
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b97b1b23-13cd-493a-bd1c-0e3e78d9e2bc'
+  module:
+    - block_content
+    - context
+    - islandora
+  theme:
+    - carapace
+id: contactbuttoncz
+theme: carapace
+region: footer_third
+weight: -18
+provider: null
+plugin: 'block_content:b97b1b23-13cd-493a-bd1c-0e3e78d9e2bc'
+settings:
+  id: 'block_content:b97b1b23-13cd-493a-bd1c-0e3e78d9e2bc'
+  label: 'Contact button CZ'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  media_source_mimetype:
+    id: media_source_mimetype
+    mimetype: ''
+    negate: false
+    context_mapping: {  }

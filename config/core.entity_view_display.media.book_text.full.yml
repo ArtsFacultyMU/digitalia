@@ -1,0 +1,34 @@
+uuid: d341d63e-0bb9-437d-9bf0-e6368d2a390a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.book_text.field_media_file
+    - field.field.media.book_text.field_media_of
+    - field.field.media.book_text.field_media_use
+    - media.type.book_text
+  module:
+    - file
+id: media.book_text.full
+targetEntityType: media
+bundle: book_text
+mode: full
+content:
+  field_media_file:
+    type: file_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_of: true
+  field_media_use: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

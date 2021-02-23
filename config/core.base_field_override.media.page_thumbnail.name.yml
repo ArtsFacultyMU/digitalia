@@ -1,0 +1,20 @@
+uuid: a8a6e05a-6232-48d1-8f52-c118a4369836
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.page_thumbnail
+id: media.page_thumbnail.name
+field_name: name
+entity_type: media
+bundle: page_thumbnail
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,50 @@
+uuid: bee86ea7-77f6-46f4-8888-941f60edfa88
+langcode: en
+status: true
+dependencies: {  }
+id: media_marc_xml
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: arne_novak_media
+label: 'Import MARC XML Media'
+source:
+  plugin: csv
+  path: migrate_sources/marc_xml.csv
+  delimiter: "\t"
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    ext: .xml
+    uid: 1
+process:
+  name: id
+  uid: constants/uid
+  file:
+    plugin: concat
+    source:
+      - id
+      - constants/ext
+  field_media_file:
+    plugin: entity_lookup
+    source: '@file'
+    entity_type: file
+    value_key: filename
+    bundle: file
+  field_media_of:
+    plugin: entity_lookup
+    source: id
+    entity_type: node
+    value_key: field_identifier
+    bundle_key: type
+    bundle: book
+  changed:
+    plugin: format_date
+    from_format: 'Y-m-d H:i:s'
+    to_format: U
+destination:
+  plugin: 'entity:media'
+  default_bundle: marc_xml
+migration_dependencies: null

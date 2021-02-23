@@ -1,0 +1,50 @@
+uuid: d195719e-6707-49c1-bd33-a2f03cf3cb5f
+langcode: en
+status: true
+dependencies: {  }
+id: media_tiff_scan
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: arne_novak_media
+label: 'Import TIFF Scan Media'
+source:
+  plugin: csv
+  path: migrate_sources/page_tiff.csv
+  delimiter: "\t"
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    ext: .tif
+    uid: 1
+process:
+  name: id
+  uid: constants/uid
+  file:
+    plugin: concat
+    source:
+      - id
+      - constants/ext
+  field_media_file:
+    plugin: entity_lookup
+    source: '@file'
+    entity_type: file
+    value_key: filename
+    bundle: file
+  field_media_of:
+    plugin: entity_lookup
+    source: id
+    entity_type: node
+    value_key: field_identifier
+    bundle_key: type
+    bundle: page
+  changed:
+    plugin: format_date
+    from_format: 'Y-m-d H:i:s'
+    to_format: U
+destination:
+  plugin: 'entity:media'
+  default_bundle: tiff_scan
+migration_dependencies: null

@@ -1,0 +1,8 @@
+name: 'Creators and Contributors'
+url_alias: creators_and_contributors
+widget:
+  config:
+    soft_limit_settings:
+      show_less_label: 'Show less'
+      show_more_label: 'Show more'
+    reset_text: 'Show all'

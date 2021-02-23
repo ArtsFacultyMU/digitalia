@@ -1,0 +1,10 @@
+uuid: 71f1bed1-d2a0-4810-bde1-0d599f3f5491
+langcode: cs
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yoNVreoTdTZTY7GuE8fI9Jmxqdz8vlo4ZJKixMNSosw
+name: Štítky
+vid: tags
+description: 'Use tags to group articles on similar topics into categories.'
+weight: 0

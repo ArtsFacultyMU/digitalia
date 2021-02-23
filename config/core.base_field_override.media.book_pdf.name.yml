@@ -1,0 +1,20 @@
+uuid: d591f71b-469f-40da-9ef9-ca262448fd36
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_pdf
+id: media.book_pdf.name
+field_name: name
+entity_type: media
+bundle: book_pdf
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

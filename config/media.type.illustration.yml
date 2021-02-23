@@ -1,0 +1,13 @@
+uuid: 8eb0316d-e5cf-48b5-bbab-e104bcdf12f8
+langcode: en
+status: true
+dependencies: {  }
+id: illustration
+label: Illustration
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map: {  }

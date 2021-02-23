@@ -1,0 +1,13 @@
+uuid: 5cc882ac-3387-4b24-bd26-11b8a1986128
+langcode: cs
+status: true
+dependencies: {  }
+id: page_thumbnail
+label: 'Page Thumbnail'
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map: {  }

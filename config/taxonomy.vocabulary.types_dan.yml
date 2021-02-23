@@ -1,0 +1,8 @@
+uuid: 9cbd4f4a-9c9b-46b3-97c7-e1bba1380c72
+langcode: cs
+status: true
+dependencies: {  }
+name: 'Types (DAN)'
+vid: types_dan
+description: ''
+weight: 0

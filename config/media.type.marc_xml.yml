@@ -1,0 +1,13 @@
+uuid: f04f33b0-c213-42c6-9612-dbc3699f6ab2
+langcode: en
+status: true
+dependencies: {  }
+id: marc_xml
+label: 'MARC XML'
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map: {  }

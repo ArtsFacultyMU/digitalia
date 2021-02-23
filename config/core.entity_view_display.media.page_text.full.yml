@@ -1,0 +1,35 @@
+uuid: 8cac8b5b-96dd-49fd-b1f8-28035a068c13
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.page_text.field_media_file
+    - field.field.media.page_text.field_media_of
+    - field.field.media.page_text.field_media_use
+    - media.type.page_text
+  module:
+    - filehash
+id: media.page_text.full
+targetEntityType: media
+bundle: page_text
+mode: full
+content:
+  field_media_file:
+    type: filehash_table
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+      algo: sha1
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_of: true
+  field_media_use: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

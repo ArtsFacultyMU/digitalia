@@ -1,0 +1,68 @@
+uuid: f627ccf8-487b-4c58-b329-393b51cb26d6
+langcode: en
+status: true
+dependencies: {  }
+id: node_part
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: arne_novak_content
+label: 'Import Part Nodes'
+source:
+  plugin: csv
+  path: migrate_sources/parts.csv
+  delimiter: "\t"
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    uid: 1
+    lang: cs
+process:
+  title: title
+  uid: constants/uid
+  field_book:
+    plugin: entity_lookup
+    source: book_id
+    entity_type: node
+    value_key: nid
+    bundle_key: type
+    bundle: book
+  field_type:
+    -
+      plugin: entity_generate
+      source: type
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: types_dan
+  field_page_from: page_from
+  field_page_to: page_to
+  field_page_final_weight: page_final_weight
+  field_author:
+    plugin: entity_lookup
+    entity_type: node
+    source: author
+    value_key: title
+    bundle_key: type
+    bundle: author
+  field_published: published
+  field_page_start:
+    plugin: entity_lookup
+    source: page_id
+    entity_type: node
+    value_key: nid
+    bundle_key: type
+    bundle: page
+  field_page_weight: page_weight
+  field_page_pdf: page_weight
+  field_citation/value: citation
+  field_citation/format:
+    plugin: default_value
+    default_value: basic_html
+  langcode: constants/lang
+destination:
+  plugin: 'entity:node'
+  default_bundle: part
+migration_dependencies: null

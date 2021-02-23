@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      fields:
+        view_node:
+          text: 'View page detail'
+      footer:
+        area: {  }

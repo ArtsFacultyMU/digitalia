@@ -1,0 +1,48 @@
+uuid: f814f4c6-4c01-40ca-b87d-869339857697
+langcode: cs
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:691df82b-73b6-4dac-bfc7-e19d7c428a8c'
+  module:
+    - block_content
+    - context
+    - islandora
+    - system
+  theme:
+    - carapace
+id: contactformdescription
+theme: carapace
+region: content
+weight: -15
+provider: null
+plugin: 'block_content:691df82b-73b6-4dac-bfc7-e19d7c428a8c'
+settings:
+  id: 'block_content:691df82b-73b6-4dac-bfc7-e19d7c428a8c'
+  label: 'Contact form description'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  media_source_mimetype:
+    id: media_source_mimetype
+    mimetype: ''
+    negate: false
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "/contact\r\n/en/contact"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,42 @@
+uuid: a7b06801-75ad-4f59-957f-9aeb3ca432c2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:04d2eac5-462d-40dc-874d-dac28bafffe5'
+  module:
+    - block_content
+    - context
+    - islandora
+  theme:
+    - carapace
+id: footerbrandscz
+theme: carapace
+region: footer_second
+weight: -18
+provider: null
+plugin: 'block_content:04d2eac5-462d-40dc-874d-dac28bafffe5'
+settings:
+  id: 'block_content:04d2eac5-462d-40dc-874d-dac28bafffe5'
+  label: 'Footer brands CZ'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  media_source_mimetype:
+    id: media_source_mimetype
+    mimetype: ''
+    negate: false
+    context_mapping: {  }

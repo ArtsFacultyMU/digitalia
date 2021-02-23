@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      title: 'Download page'
+      fields:
+        field_media_file:
+          settings:
+            link_text: 'OCR text ([file:size])'
+        field_media_image:
+          settings:
+            link_text: 'Page in PNG ([file:size])'

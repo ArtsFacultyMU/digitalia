@@ -1,0 +1,50 @@
+uuid: 1b737ec9-12aa-402d-92bc-414b7bcd9465
+langcode: en
+status: true
+dependencies: {  }
+id: media_book_cover
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: arne_novak_media
+label: 'Import Book Cover Media'
+source:
+  plugin: csv
+  path: migrate_sources/book_cover.csv
+  delimiter: "\t"
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    ext: .gif
+    uid: 1
+process:
+  name: id
+  uid: constants/uid
+  file:
+    plugin: concat
+    source:
+      - id
+      - constants/ext
+  field_media_image:
+    plugin: entity_lookup
+    source: '@file'
+    entity_type: file
+    value_key: filename
+    bundle: image
+  field_media_of:
+    plugin: entity_lookup
+    source: id
+    entity_type: node
+    value_key: field_identifier
+    bundle_key: type
+    bundle: book
+  changed:
+    plugin: format_date
+    from_format: 'Y-m-d H:i:s'
+    to_format: U
+destination:
+  plugin: 'entity:media'
+  default_bundle: book_cover
+migration_dependencies: null

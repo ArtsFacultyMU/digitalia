@@ -1,0 +1,8 @@
+display:
+  entity_view_1:
+    display_options:
+      fields:
+        field_citation:
+          label: Citation
+          alter:
+            text: '{{ field_citation }} Available from: <a href=/node/{{ nid }}>https://arne-novak.phil.muni.cz/node/{{ nid }}</a>'

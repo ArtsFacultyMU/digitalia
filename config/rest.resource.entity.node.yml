@@ -1,0 +1,51 @@
+uuid: 2aaf9b5f-36e5-419d-9c6d-ac3dbf6d313b
+langcode: cs
+status: true
+dependencies:
+  enforced:
+    module:
+      - islandora_core_feature
+  module:
+    - basic_auth
+    - csv_serialization
+    - jsonld
+    - jwt
+    - node
+    - serialization
+    - user
+_core:
+  default_config_hash: Bs7fv0SCvDv2xd3Mk5Yn62onxQ3VhKK2s-3obhAeGFE
+id: entity.node
+plugin_id: 'entity:node'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - csv
+      - jsonld
+      - json
+    supported_auth:
+      - jwt_auth
+      - basic_auth
+      - cookie
+  POST:
+    supported_formats:
+      - json
+    supported_auth:
+      - jwt_auth
+      - basic_auth
+      - cookie
+  DELETE:
+    supported_formats:
+      - json
+    supported_auth:
+      - jwt_auth
+      - basic_auth
+      - cookie
+  PATCH:
+    supported_formats:
+      - json
+    supported_auth:
+      - jwt_auth
+      - basic_auth
+      - cookie

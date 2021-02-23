@@ -1,0 +1,13 @@
+uuid: 8311ca90-de37-40dd-9419-bcc06cd02f40
+langcode: cs
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jonvgt3CkUM2eMLTFwWfHileWWDC4YtXCuIlCahTk_I
+id: personal
+label: 'Personal contact form'
+recipients: {  }
+reply: ''
+weight: 0
+message: 'Ďekujeme za vaši správu, ozveme se vám.'
+redirect: ''

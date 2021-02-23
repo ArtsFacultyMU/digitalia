@@ -1,0 +1,50 @@
+uuid: 2328f9ba-0861-4bb9-89e0-f0192a6278fb
+langcode: cs
+status: true
+dependencies:
+  config:
+    - node.type.book
+  enforced:
+    module:
+      - islandora_defaults
+  module:
+    - node
+id: node.book
+targetEntityType: node
+bundle: book
+types:
+  - 'pcdm:Object'
+fieldMappings:
+  title:
+    properties:
+      - 'dcterms:title'
+  field_author:
+    properties:
+      - 'dcterms:contributor'
+  field_published:
+    properties:
+      - 'dcterms:issued'
+  field_rights:
+    properties:
+      - 'dcterms:rights'
+  field_keywords:
+    properties:
+      - 'dcterms:subject'
+  field_pid:
+    properties:
+      - 'dcterms:identifier'
+  nid:
+    properties:
+      - 'dcterms:identifier'
+  field_publisher:
+    properties:
+      - 'dcterms:publisher'
+  field_citation:
+    properties:
+      - 'dcterms:bibliographicCitation'
+  field_description:
+    properties:
+      - 'dcterms:description'
+  field_type:
+    properties:
+      - 'dcterms:type'

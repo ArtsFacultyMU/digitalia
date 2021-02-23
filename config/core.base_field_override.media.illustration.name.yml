@@ -1,0 +1,20 @@
+uuid: 657d98d4-95a3-4769-aeb3-89b9cb942be6
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.illustration
+id: media.illustration.name
+field_name: name
+entity_type: media
+bundle: illustration
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

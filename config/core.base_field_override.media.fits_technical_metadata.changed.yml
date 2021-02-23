@@ -1,0 +1,18 @@
+uuid: a8e3f87c-83d6-49df-9e3f-a18b7a237dec
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.fits_technical_metadata
+id: media.fits_technical_metadata.changed
+field_name: changed
+entity_type: media
+bundle: fits_technical_metadata
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

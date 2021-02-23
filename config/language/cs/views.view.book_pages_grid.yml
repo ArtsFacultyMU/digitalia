@@ -1,0 +1,15 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          tags:
+            previous: '‹ Předchozí'
+            next: 'Další ›'
+            first: '« První'
+            last: 'Poslední »'
+      footer:
+        area:
+          content:
+            value: ''
+            format: basic_html

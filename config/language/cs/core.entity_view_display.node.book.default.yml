@@ -1,0 +1,83 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.field.node.book.field_author
+    - field.field.node.book.field_citation
+    - field.field.node.book.field_contents
+    - field.field.node.book.field_description
+    - field.field.node.book.field_identifier
+    - field.field.node.book.field_keywords
+    - field.field.node.book.field_member_of
+    - field.field.node.book.field_model
+    - field.field.node.book.field_pid
+    - field.field.node.book.field_published
+    - field.field.node.book.field_publisher
+    - field.field.node.book.field_rights
+    - field.field.node.book.field_sysno
+    - field.field.node.book.field_title_page
+    - node.type.book
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_metadata:
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      region: content
+      format_settings:
+        direction: vertical
+        id: ''
+        classes: ''
+      label: Metadata
+    group_pdf:
+      parent_name: ''
+      weight: 1
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        id: ''
+        classes: ''
+        open: false
+      label: 'Zobrazit PDF'
+id: node.book.default
+targetEntityType: node
+bundle: book
+mode: default
+content:
+  field_author:
+    weight: 0
+    label: inline
+    settings:
+      link: true
+    type: entity_reference_label
+    region: content
+  field_description:
+    weight: 5
+    label: inline
+    type: basic_string
+    region: content
+  field_published:
+    weight: 2
+    label: inline
+    type: number_decimal
+    region: content
+  field_publisher:
+    weight: 3
+    label: inline
+    settings:
+      link_to_entity: false
+    type: string
+    region: content
+  katalog_muni_url_entity_view_1:
+    weight: 3
+    region: content
+  pdfjs_media_evas_entity_view_1:
+    weight: 2
+    region: content
+hidden:
+  display_media_entity_view_2: true
+  pdfjs_media_evas_service_file: true

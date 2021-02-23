@@ -1,0 +1,20 @@
+uuid: 5abbc631-a93f-4d75-808d-21d73531b241
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_text
+id: media.book_text.name
+field_name: name
+entity_type: media
+bundle: book_text
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

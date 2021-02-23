@@ -1,0 +1,28 @@
+uuid: 7f2fb342-e1aa-49b5-bf6b-f7a32c9eadd4
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_member_of
+    - node.type.islandora_object
+    - node.type.page
+id: node.page.field_member_of
+field_name: field_member_of
+entity_type: node
+bundle: page
+label: 'Member of'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      islandora_object: islandora_object
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,166 @@
+uuid: 700cf673-0e88-4a11-b86a-e88ebda1932a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.part.field_author
+    - field.field.node.part.field_book
+    - field.field.node.part.field_citation
+    - field.field.node.part.field_page_final_weight
+    - field.field.node.part.field_page_from
+    - field.field.node.part.field_page_pdf
+    - field.field.node.part.field_page_start
+    - field.field.node.part.field_page_to
+    - field.field.node.part.field_page_weight
+    - field.field.node.part.field_pages
+    - field.field.node.part.field_published
+    - field.field.node.part.field_type
+    - node.type.part
+  module:
+    - field_group
+    - field_token_value
+    - user
+third_party_settings:
+  field_group:
+    group_metadata:
+      children:
+        - field_author
+        - field_book
+        - field_pages
+        - field_published
+        - field_type
+        - part_citation_entity_view_1
+      parent_name: ''
+      weight: 11
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: open
+        direction: vertical
+      label: Metadata
+id: node.part.default
+targetEntityType: node
+bundle: part
+mode: default
+content:
+  display_media_entity_view_1:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  display_media_entity_view_2:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  display_media_service_file:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  display_media_thumbnail:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_author:
+    weight: 11
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_book:
+    weight: 12
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_pages:
+    weight: 13
+    label: inline
+    settings:
+      wrapper: ''
+    third_party_settings: {  }
+    type: field_token_value_text
+    region: content
+  field_published:
+    weight: 14
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: number_unformatted
+    region: content
+  field_type:
+    weight: 15
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  openseadragon_media_evas_entity_view_1:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  openseadragon_media_evas_entity_view_2:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  openseadragon_media_evas_service_file:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  part_citation_entity_view_1:
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  part_link_entity_view_1:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  part_pages_grid_entity_view_1:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pdfjs_media_evas_entity_view_1:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pdfjs_media_evas_entity_view_2:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  pdfjs_media_evas_service_file:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_citation: true
+  field_page_final_weight: true
+  field_page_from: true
+  field_page_pdf: true
+  field_page_start: true
+  field_page_to: true
+  field_page_weight: true
+  langcode: true
+  links: true
+  part_citation_entity_view_2: true
+  part_pages_field_entity_view_1: true
+  part_pdf_entity_view_1: true
+  search_api_excerpt: true

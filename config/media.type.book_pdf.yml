@@ -1,0 +1,13 @@
+uuid: 33fe2410-1a70-49b9-91b4-7f94303a6c80
+langcode: en
+status: true
+dependencies: {  }
+id: book_pdf
+label: 'Book PDF'
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map: {  }

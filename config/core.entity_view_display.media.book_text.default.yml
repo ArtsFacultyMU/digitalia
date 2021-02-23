@@ -1,0 +1,32 @@
+uuid: cb8602c3-7f39-4045-af73-c1fac52c7e89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.book_text.field_media_file
+    - field.field.media.book_text.field_media_of
+    - field.field.media.book_text.field_media_use
+    - media.type.book_text
+  module:
+    - islandora_text_extraction
+id: media.book_text.default
+targetEntityType: media
+bundle: book_text
+mode: default
+content:
+  field_media_file:
+    type: ocr_formatter
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_of: true
+  field_media_use: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

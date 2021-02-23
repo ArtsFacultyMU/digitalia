@@ -1,0 +1,22 @@
+uuid: b8e22191-dc91-48d3-a96b-c2484c553db6
+langcode: cs
+status: true
+dependencies:
+  module:
+    - controlled_access_terms
+    - taxonomy
+_core:
+  default_config_hash: X-F2wZtHnhZOzc7xL38Rw-dzhZYMi4SQz2KcD77kXD4
+id: taxonomy_term.field_relationships
+field_name: field_relationships
+entity_type: taxonomy_term
+type: typed_relation
+settings:
+  target_type: taxonomy_term
+module: controlled_access_terms
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

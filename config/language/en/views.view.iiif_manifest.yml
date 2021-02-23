@@ -1,0 +1,36 @@
+label: 'IIIF Manifest'
+description: 'Generates IIIF manifests for paged content'
+display:
+  default:
+    display_title: Main
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+          tags:
+            previous: ‹‹
+            next: ››
+      fields:
+        field_media_file:
+          separator: ', '
+        field_media_image:
+          separator: ', '
+  rest_export_1:
+    display_title: 'REST export'
+  rest_export_2:
+    display_title: 'REST export - single node'
+    display_options:
+      arguments:
+        field_media_of_target_id:
+          exception:
+            title: All

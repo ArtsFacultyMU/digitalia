@@ -1,0 +1,6 @@
+label: 'PDF Derivatives'
+conditions:
+  media_has_term:
+    uri: 'http://pcdm.org/use#OriginalFile'
+  parent_node_has_term:
+    uri: 'https://schema.org/DigitalDocument'

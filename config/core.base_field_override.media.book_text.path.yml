@@ -1,0 +1,20 @@
+uuid: a89eb504-2442-409e-9d2d-ff4875abda61
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_text
+  module:
+    - path
+id: media.book_text.path
+field_name: path
+entity_type: media
+bundle: book_text
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,49 @@
+uuid: 98f4d8bf-c7d2-4284-9aba-4123923258a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.page_scan.field_media_image
+    - field.field.media.page_scan.field_media_of
+    - field.field.media.page_scan.field_media_use
+    - image.style.max_650x650
+    - media.type.page_scan
+  module:
+    - image
+id: media.page_scan.default
+targetEntityType: media
+bundle: page_scan
+mode: default
+content:
+  field_media_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: max_650x650
+      image_link: ''
+    third_party_settings: {  }
+  field_media_of:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_media_use:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

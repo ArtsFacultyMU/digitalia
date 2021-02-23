@@ -1,0 +1,20 @@
+uuid: 2d22d0b7-1507-4002-988a-2174c1d571d0
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_pdf
+  module:
+    - path
+id: media.book_pdf.path
+field_name: path
+entity_type: media
+bundle: book_pdf
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

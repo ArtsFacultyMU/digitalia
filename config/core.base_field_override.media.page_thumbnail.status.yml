@@ -1,0 +1,22 @@
+uuid: 4e6be205-70ef-415d-b69f-9c69e1a161e2
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.page_thumbnail
+id: media.page_thumbnail.status
+field_name: status
+entity_type: media
+bundle: page_thumbnail
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

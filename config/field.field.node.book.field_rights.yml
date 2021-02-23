@@ -1,0 +1,29 @@
+uuid: e62e605e-0cf6-42e3-be6b-b6981d79548e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rights
+    - node.type.book
+    - taxonomy.vocabulary.rights
+id: node.book.field_rights
+field_name: field_rights
+entity_type: node
+bundle: book
+label: Licence
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      rights: rights
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

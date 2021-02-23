@@ -1,0 +1,22 @@
+uuid: 9f64ace7-b489-49bf-820f-fb8848b0209d
+langcode: cs
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bartik
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: bartik_help
+theme: bartik
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Nápověda
+  provider: help
+  label_display: '0'
+visibility: {  }

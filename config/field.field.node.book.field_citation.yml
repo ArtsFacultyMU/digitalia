@@ -1,0 +1,21 @@
+uuid: cfede199-207d-482b-9fcd-8351420ba84f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_citation
+    - node.type.book
+  module:
+    - text
+id: node.book.field_citation
+field_name: field_citation
+entity_type: node
+bundle: book
+label: Citation
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

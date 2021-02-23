@@ -1,0 +1,13 @@
+uuid: 4cf6b168-58bd-407a-8533-fda764be08ed
+langcode: en
+status: true
+dependencies: {  }
+id: tiff_scan
+label: 'TIFF Scan'
+description: ''
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map: {  }

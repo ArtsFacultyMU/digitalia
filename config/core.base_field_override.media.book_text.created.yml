@@ -1,0 +1,18 @@
+uuid: bc5dc33b-60d4-41c1-a843-bb12545ccc6b
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_text
+id: media.book_text.created
+field_name: created
+entity_type: media
+bundle: book_text
+label: 'Authored on'
+description: 'The time the media item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

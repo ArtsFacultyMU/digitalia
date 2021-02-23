@@ -1,0 +1,23 @@
+uuid: f9256244-93e1-4121-98c9-5af210a91c80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_weight
+    - node.type.part
+id: node.part.field_page_weight
+field_name: field_page_weight
+entity_type: node
+bundle: part
+label: 'Page Weight'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

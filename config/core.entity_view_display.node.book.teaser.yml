@@ -1,0 +1,80 @@
+uuid: c5323780-2d57-4918-ac5d-19d3a7ab2b22
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.book.field_author
+    - field.field.node.book.field_citation
+    - field.field.node.book.field_contents
+    - field.field.node.book.field_description
+    - field.field.node.book.field_identifier
+    - field.field.node.book.field_keywords
+    - field.field.node.book.field_member_of
+    - field.field.node.book.field_model
+    - field.field.node.book.field_pid
+    - field.field.node.book.field_published
+    - field.field.node.book.field_publisher
+    - field.field.node.book.field_rights
+    - field.field.node.book.field_sysno
+    - field.field.node.book.field_title_page
+    - field.field.node.book.field_type
+    - node.type.book
+  module:
+    - field_delimiter
+    - user
+id: node.book.teaser
+targetEntityType: node
+bundle: book
+mode: teaser
+content:
+  field_author:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings:
+      field_delimiter:
+        delimiter: ',&nbsp;'
+  part_citation_entity_view_2:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  book_citation_book_eva_citation: true
+  book_files_download_entity_view_1: true
+  book_pages_grid_entity_view_1: true
+  display_media_entity_view_1: true
+  display_media_entity_view_2: true
+  display_media_service_file: true
+  display_media_thumbnail: true
+  eva_ocr_text_entity_view_1: true
+  field_citation: true
+  field_contents: true
+  field_description: true
+  field_identifier: true
+  field_keywords: true
+  field_member_of: true
+  field_model: true
+  field_pid: true
+  field_published: true
+  field_publisher: true
+  field_rights: true
+  field_sysno: true
+  field_title_page: true
+  field_type: true
+  islandora_fits_checksum: true
+  katalog_muni_url_entity_view_1: true
+  langcode: true
+  links: true
+  openseadragon_media_evas_entity_view_1: true
+  openseadragon_media_evas_entity_view_2: true
+  openseadragon_media_evas_service_file: true
+  part_citation_entity_view_1: true
+  pdfjs_media_evas_entity_view_1: true
+  pdfjs_media_evas_entity_view_2: true
+  pdfjs_media_evas_service_file: true
+  search_api_excerpt: true

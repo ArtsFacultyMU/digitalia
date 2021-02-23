@@ -1,0 +1,41 @@
+uuid: fd080620-ee72-4130-9b8d-6f032d28a722
+langcode: cs
+status: true
+dependencies:
+  config:
+    - facets.facet.published
+  module:
+    - context
+    - facets
+    - islandora
+  theme:
+    - carapace
+id: published
+theme: carapace
+region: highlighted
+weight: 0
+provider: null
+plugin: 'facet_block:published'
+settings:
+  id: 'facet_block:published'
+  label: Published
+  provider: facets
+  label_display: '0'
+  block_id: published
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion:
+      view-search_content-page_1: view-search_content-page_1
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  media_source_mimetype:
+    id: media_source_mimetype
+    mimetype: ''
+    negate: false
+    context_mapping: {  }

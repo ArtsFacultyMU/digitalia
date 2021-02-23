@@ -1,0 +1,12 @@
+display:
+  default:
+    display_options:
+      header:
+        area:
+          content:
+            value: "<p><br />\r\n<span lang=\"EN-GB\"><span>Parts by Arne Novák</span></span><span>:</span></p>\r\n"
+            format: basic_html
+      fields:
+        title:
+          alter:
+            text: '/en/node/{{ nid }}'

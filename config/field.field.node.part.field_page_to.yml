@@ -1,0 +1,19 @@
+uuid: fc9e46d6-f223-4752-bfa5-988ec34b9c9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_to
+    - node.type.part
+id: node.part.field_page_to
+field_name: field_page_to
+entity_type: node
+bundle: part
+label: 'Page (to)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

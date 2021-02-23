@@ -1,0 +1,40 @@
+uuid: 8fe66ed4-49ec-4ef9-a91b-72b978d1153b
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.media.pdfjs
+    - field.field.media.book_pdf.field_media_file
+    - field.field.media.book_pdf.field_media_of
+    - field.field.media.book_pdf.field_media_use
+    - media.type.book_pdf
+  module:
+    - pdf
+id: media.book_pdf.pdfjs
+targetEntityType: media
+bundle: book_pdf
+mode: pdfjs
+content:
+  field_media_file:
+    label: visually_hidden
+    weight: 0
+    settings:
+      keep_pdfjs: '1'
+      width: 100%
+      height: 700px
+      page: '1'
+      zoom: ''
+      custom_zoom: ''
+      pagemode: thumbs
+    third_party_settings: {  }
+    type: pdf_default
+    region: content
+hidden:
+  created: true
+  field_media_of: true
+  field_media_use: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

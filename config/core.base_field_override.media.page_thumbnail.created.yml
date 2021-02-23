@@ -1,0 +1,18 @@
+uuid: a9769b88-05de-4047-9e9c-9cea40fdac55
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.page_thumbnail
+id: media.page_thumbnail.created
+field_name: created
+entity_type: media
+bundle: page_thumbnail
+label: 'Authored on'
+description: 'The time the media item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

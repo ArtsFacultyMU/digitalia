@@ -1,0 +1,20 @@
+uuid: d2a31159-4bfe-46c9-b949-62b59c00467f
+langcode: cs
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.geo_location
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: 0_hEJhLmynz6bRW7K1PV9MYWxOpG7cPIQyAdYH-R_7Y
+id: taxonomy_term.geo_location
+target_entity_type_id: taxonomy_term
+target_bundle: geo_location
+default_langcode: site_default
+language_alterable: false

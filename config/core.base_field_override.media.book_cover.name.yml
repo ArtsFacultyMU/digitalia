@@ -1,0 +1,20 @@
+uuid: 0eac5be9-8c72-432b-8edc-227328da0712
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.book_cover
+id: media.book_cover.name
+field_name: name
+entity_type: media
+bundle: book_cover
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

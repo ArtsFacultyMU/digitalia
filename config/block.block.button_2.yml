@@ -1,0 +1,52 @@
+uuid: e729a404-809b-4603-80d2-bbc37afc54b8
+langcode: cs
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:04cd634a-3ec7-4ee0-a6c8-e77c91e7585e'
+  module:
+    - block_content
+    - context
+    - islandora
+    - node
+  theme:
+    - carapace
+id: button_2
+theme: carapace
+region: content
+weight: -17
+provider: null
+plugin: 'block_content:04cd634a-3ec7-4ee0-a6c8-e77c91e7585e'
+settings:
+  id: 'block_content:04cd634a-3ec7-4ee0-a6c8-e77c91e7585e'
+  label: Button
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  media_source_mimetype:
+    id: media_source_mimetype
+    mimetype: ''
+    negate: false
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      book: book
+      page: page
+      part: part
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

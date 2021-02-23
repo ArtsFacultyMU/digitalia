@@ -1,0 +1,13 @@
+uuid: 0ccbf17c-d1e4-4d9d-b253-d07a17c694b3
+langcode: en
+status: true
+dependencies: {  }
+id: page_scan
+label: 'Page Scan'
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map: {  }

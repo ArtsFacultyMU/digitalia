@@ -1,0 +1,25 @@
+uuid: eccfaeb5-6919-4678-b6bf-b0c7cec7fc50
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pages
+    - node.type.part
+  module:
+    - field_token_value
+id: node.part.field_pages
+field_name: field_pages
+entity_type: node
+bundle: part
+label: 'Rozsah stran'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '[node:field_page_from]–[node:field_page_to]'
+default_value_callback: ''
+settings:
+  field_value: '[node:field_page_from]–[node:field_page_to]'
+  remove_empty: 1
+field_type: field_token_value

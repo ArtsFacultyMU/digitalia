@@ -1,0 +1,22 @@
+uuid: bb08eac5-092e-4ead-8983-ea6bce77f8fe
+langcode: cs
+status: true
+dependencies:
+  module:
+    - node
+id: part_pages
+label: 'Part pages'
+type: 'canonical_entities:node'
+pattern: 'node/[node:field_book:target_id]/part/[node:field_page_weight]/[node:field_page_final_weight]'
+selection_criteria:
+  76f6fbab-a922-47cb-87e4-db43224af7fe:
+    id: node_type
+    bundles:
+      part: part
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 76f6fbab-a922-47cb-87e4-db43224af7fe
+selection_logic: and
+weight: -5
+relationships: {  }

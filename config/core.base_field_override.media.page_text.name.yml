@@ -1,0 +1,20 @@
+uuid: 6a1a0720-f7c9-41b6-8125-26b429894936
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.page_text
+id: media.page_text.name
+field_name: name
+entity_type: media
+bundle: page_text
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

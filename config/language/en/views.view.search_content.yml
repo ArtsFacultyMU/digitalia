@@ -1,0 +1,35 @@
+display:
+  default:
+    display_options:
+      fields:
+        field_published:
+          fallback_options:
+            format_plural_string: !!binary MQNAY291bnQ=
+      header:
+        result:
+          content: 'Displaying @start–@end of @total'
+      exposed_form:
+        options:
+          submit_button: Search
+      filters:
+        type:
+          group_info:
+            group_items:
+              1:
+                title: Titles
+              2:
+                title: Fulltext
+        aggregated_field:
+          expose:
+            label: 'Year of issue (from)'
+        aggregated_field_1:
+          expose:
+            label: 'Year of issue (to)'
+      title: Searching
+      pager:
+        options:
+          tags:
+            previous: '‹ Prev'
+            next: 'Next › '
+            first: '« First'
+            last: 'Last »'

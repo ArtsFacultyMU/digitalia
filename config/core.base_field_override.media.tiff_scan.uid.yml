@@ -1,0 +1,20 @@
+uuid: 321fb36d-9d5e-45fb-b97b-0e2970c17710
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.tiff_scan
+id: media.tiff_scan.uid
+field_name: uid
+entity_type: media
+bundle: tiff_scan
+label: 'Authored by'
+description: 'The user ID of the author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

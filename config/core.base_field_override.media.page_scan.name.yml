@@ -1,0 +1,20 @@
+uuid: 9f69f737-db75-419f-9c5e-c8c44c08c32f
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.page_scan
+id: media.page_scan.name
+field_name: name
+entity_type: media
+bundle: page_scan
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

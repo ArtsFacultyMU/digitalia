@@ -1,0 +1,18 @@
+uuid: f32d5a5e-341f-4145-8a7f-1d31354f8995
+langcode: cs
+status: true
+dependencies:
+  config:
+    - media.type.marc_xml
+id: media.marc_xml.changed
+field_name: changed
+entity_type: media
+bundle: marc_xml
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

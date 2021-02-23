@@ -1,0 +1,118 @@
+uuid: cee6bda2-b4dc-4ded-b41c-af06d8c80a23
+langcode: en
+status: true
+dependencies: {  }
+id: node_book
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: arne_novak_content
+label: 'Import Book Nodes'
+source:
+  plugin: csv
+  path: migrate_sources/books.csv
+  delimiter: "\t"
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    uid: 1
+    model: 'Paged Content'
+    collection: 'Diela Arne Nováka'
+    lang: cs
+process:
+  title: title
+  uid: constants/uid
+  field_identifier: id
+  field_author:
+    -
+      plugin: explode
+      delimiter: '|'
+      source: author
+    -
+      plugin: entity_generate
+      entity_type: node
+      value_key: title
+      bundle_key: type
+      bundle: author
+  field_published: issued
+  field_rights:
+    -
+      plugin: entity_generate
+      source: rights
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: rights
+  field_type:
+    -
+      plugin: entity_generate
+      source: type
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: types_dan
+  field_publisher: publisher
+  field_citation/value: citation
+  field_citation/format:
+    plugin: default_value
+    default_value: basic_html
+  field_pid: pid
+  field_sysno: sysno
+  field_description:
+    -
+      plugin: skip_on_empty
+      source: description
+      method: process
+    -
+      plugin: explode
+      delimiter: '|'
+      source: description
+  field_keywords:
+    -
+      source: keywords
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: explode
+      delimiter: ','
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: keywords
+  field_model:
+    plugin: entity_lookup
+    source: constants/model
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: islandora_models
+  field_member_of:
+    plugin: entity_lookup
+    source: constants/collection
+    entity_type: node
+    value_key: title
+    bundle_key: type
+    bundle: islandora_object
+  field_title_page:
+    plugin: entity_lookup
+    source: title_page
+    entity_type: node
+    value_key: field_identifier
+    bundle_key: type
+    bundle: page
+  field_contents:
+    plugin: entity_lookup
+    source: contents
+    entity_type: node
+    value_key: field_identifier
+    bundle_key: type
+    bundle: page
+  langcode: constants/lang
+destination:
+  plugin: 'entity:node'
+  default_bundle: book
+migration_dependencies: null

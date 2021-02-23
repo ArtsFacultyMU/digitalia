@@ -1,0 +1,9 @@
+uuid: 619c51dd-9ca8-4087-9054-5f87b6861aa6
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__search_titles_and_authors__page_1
+name: 'search_api:views_page__search_titles_and_authors__page_1'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }
