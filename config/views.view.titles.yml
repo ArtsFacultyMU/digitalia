@@ -148,19 +148,24 @@ display:
           group: 1
           exposed: false
           expose:
-            operator_id: ''
-            label: ''
+            operator_id: field_author_target_id_op
+            label: 'Author (field_author)'
             description: ''
             use_operator: false
-            operator: ''
+            operator: field_author_target_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: ''
+            identifier: field_author_target_id
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              editor: '0'
+              content_editor: '0'
             placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
@@ -168,14 +173,29 @@ display:
           group_info:
             label: ''
             description: ''
-            identifier: ''
-            optional: true
-            widget: select
+            identifier: field_author_target_id
+            optional: false
+            widget: radios
             multiple: false
             remember: false
-            default_group: All
+            default_group: '1'
             default_group_multiple: {  }
-            group_items: {  }
+            group_items:
+              1:
+                title: 'Díla Arne Nováka'
+                operator: '='
+                value:
+                  value: '11'
+                  min: ''
+                  max: ''
+              2:
+                title: 'Díla od všech autorů'
+                operator: '>='
+                value:
+                  value: '1'
+                  min: ''
+                  max: ''
+          use_tokens: 0
           plugin_id: numeric
         type:
           id: type
