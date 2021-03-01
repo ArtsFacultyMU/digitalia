@@ -6,7 +6,13 @@ BACKUP_DIR=/root/backup
 
 $DRUSH_BIN --root=$DRUPAL_DIR config:export --destination=$BACKUP_DIR/config-$(date '+%Y%m%d')
 
-$DRUSH_BIN --root=$DRUPAL_DIR sql:dump --extra-dump=--no-tablespaces --result-file=$BACKUP_DIR/dan-$(date '+%Y%m%d').sql
+tar -cjf $BACKUP_DIR/config-$(date '+%Y%m%d').tar.bz2 $BACKUP_DIR/config-$(date '+%Y%m%d') && rm -rf $BACKUP_DIR/config-$(date '+%Y%m%d')
+
+
+$DRUSH_BIN --root=$DRUPAL_DIR sql:dump --extra-dump=--no-tablespaces --result-file=$BACKUP_DIR/drupal-$(date '+%Y%m%d').sql
+
+tar -cjf $BACKUP_DIR/drupal-$(date '+%Y%m%d').sql.tar.bz2 $BACKUP_DIR/drupal-$(date '+%Y%m%d').sql && rm -f $BACKUP_DIR/drupal-$(date '+%Y%m%d').sql
+
 
 rsync -a --delete --exclude='drupal/vendor/' $DRUPAL_DIR $BACKUP_DIR
 
