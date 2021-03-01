@@ -1,6 +1,11 @@
 #!/bin/bash
 
+USERDIRS=user_dirs
+
 mkdir -p distrib
 
-cp -v root/bin/* distrib/
-cp -v home/islandora/bin/* distrib/
+cp -v ${USERDIRS}/root/bin/* distrib/
+cp -v ${USERDIRS}/home/islandora/bin/* distrib/
+cp -v docs/README distrib/
+
+tar -cjvf distrib.tar.bz2 distrib/
