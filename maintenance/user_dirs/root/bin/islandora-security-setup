@@ -6,32 +6,47 @@ then
 	exit 0
 fi
 
-servertype=$1
+servertype={$1:-devel}
 
-adduser --disabled-password --gecos "" islandora
+echo "Setting islandora for $servertype server...";
+
+grep -q 'islandora' /etc/passwd 
+
+if [ $? -ne 0 ]
+then
+	adduser --disabled-password --gecos "" islandora
+fi
+
 chown -R islandora:islandora /var/www/html/*
 chmod -R o-w /var/www/html/*
 chgrp -R www-data /var/www/html/drupal/web/sites/default/files
 chmod -R g+w /var/www/html/drupal/web/sites/default/files
 
+mkdir -p /root/bin
+mkdir -p /root/backup
+
+cp -v islandora-backup /root/bin/
+cp -v islandora-root-crontab /root/bin/
+
 if [ $servertype == 'production' ]
 then
+	cp bacula-backup-report.sh /root/bin
 	cat islandora-twpol.txt > '/etc/tripwire/twpol.txt'
 	twadmin -m P -S /etc/tripwire/site.key /etc/tripwire/twpol.txt
 	tripwire -m i
 fi
-
-mkdir -p /root/backup
 
 su - islandora -c 'mkdir -p /home/islandora/logs/'
 su - islandora -c 'mkdir -p /home/islandora/bin/'
 
 mv -v islandora-security-setup-islandora /home/islandora/bin
 mv -v islandora-security-update /home/islandora/bin
-mv -v islandora-security-check /home/islandora/bin
+mv -v islandora-security-checks /home/islandora/bin
 chown -R islandora:islandora /home/islandora/bin
 
 su - islandora -c '~/bin/islandora-security-setup-islandora'
 
 #add-apt-repository --yes ppa:certbot/certbot
 #certbot --apache -m kic_admins@ics.muni.cz --agree-tos -d dan-demo.phil.muni.cz
+
+echo "Done."
