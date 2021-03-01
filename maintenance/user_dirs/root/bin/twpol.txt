@@ -298,6 +298,7 @@ SIG_HI        = 100 ;                # Critical files that are
 {
         /var/www/html   -> $(SEC_BIN);
 	!/var/www/html/drupal/web/sites/default/files;
+	!/var/www/html/drupal/config/sync/;
 	!/root/.drush/cache;
 	!/root/backup;
 	!/var/www/html/matomo/tmp;
