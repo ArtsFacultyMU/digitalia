@@ -14,29 +14,22 @@ preserve_hostname: true
 
 *** or 
 
-$ vim lib/cloud/data/set-hostname
-$ vim lib/cloud/seed/nocloud-net/user-data
+$ vim /var/lib/cloud/data/set-hostname
+$ vim /var/lib/cloud/seed/nocloud-net/user-data
 $ cloud-init clean
 $ cloud-init init
 
 
 
-
+*** Edit: 
 /etc/mailname
 $ newaliases
-$ update-ca-certificates
-$ dpkg --purge --force-depends ca-certificates-java
-$ apt-get install ca-certificates-java
-
-*** Edit sites and enable/disable:
-/etc/apache2/
-
-*** If Let's Encrypt was installed using snap:
-$ snap remove certbot
-$ rm /usr/bin/certbot
 
 *** Edit:
 /etc/postfix/main.cf
+
+*** Comment out proxy for apt:
+$ vim /etc/apt/apt.conf.d/90curtin-aptproxy
 
 
 *** After reboot:
@@ -50,5 +43,32 @@ $ dpkg-reconfigure debconf
 $ for pkg in $(dpkg-query --show | awk '{print $1}'); do echo ; echo "--> $pkg" ; echo ; dpkg-reconfigure --frontend=noninteractive --priority=critical $pkg < /dev/null ; done
 
 
+*** Optional if Islandora was already installed:
+$ update-ca-certificates
+$ dpkg --purge --force-depends ca-certificates-java
+$ apt-get install ca-certificates-java
+
+*** Edit sites and enable/disable:
+/etc/apache2/
+
+*** If Let's Encrypt was installed using snap:
+$ snap remove certbot
+$ rm /usr/bin/certbot
+
+
+
+
 *** Islandora etc.
+mkdir /root/export
+drush config:export --destination=/root/export/
+cd /root/export
+sed -i 's/dan-demo/dan-devel/' *
+
+cd /var/www/html/drupal
+drush config:import --source=/root/export/
+grep -r -l --include='*.php' --include='*.yml' --include='*.yaml' 'dan-demo' /var/www/html/ | xargs sed -i 's/dan-demo/dan-devel/'
+grep -l --exclude='*\.log*' --exclude-dir='log' --exclude-dir='.git' --exclude-dir='mail' -r 'dan-demo' /opt | xargs sed -i 's/dan-demo/dan-devel/'
+
+serversearch_api.server.default_solr_server.yml
+
 
