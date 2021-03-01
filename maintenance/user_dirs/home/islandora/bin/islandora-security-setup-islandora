@@ -11,9 +11,8 @@ $DRUSH_BIN --root=${DRUPAL_DIR} en security_review
  
 $COMPOSER_BIN --working-dir=${DRUPAL_DIR} require 'drupal/flood_control'
 $DRUSH_BIN --root=${DRUPAL_DIR} en flood_control 
-$DRUSH_BIN --root=${DRUPAL_DIR} cset user.flood ip_limit 3 
-$DRUSH_BIN --root=${DRUPAL_DIR} cset user.flood user_limit 3 
+$DRUSH_BIN -y --root=${DRUPAL_DIR} cset user.flood ip_limit 3 
+$DRUSH_BIN -y --root=${DRUPAL_DIR} cset user.flood user_limit 3 
+$DRUSH_BIN -y --root=${DRUPAL_DIR} cset user.settings register admin_only 
 
-$DRUSH_BIN --root=${DRUPAL_DIR} cset user.settings register admin_only 
-
-$DRUSH_BIN --root=${DRUPAL_DIR} pmu simpletest 
+$DRUSH_BIN -y --root=${DRUPAL_DIR} pmu simpletest 
