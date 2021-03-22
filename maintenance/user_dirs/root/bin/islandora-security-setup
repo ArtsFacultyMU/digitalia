@@ -20,6 +20,7 @@ fi
 chown -R islandora:islandora /var/www/html/*
 chmod -R o-w /var/www/html/*
 chgrp -R www-data /var/www/html/drupal/web/sites/default/files
+chgrp -R www-data /var/www/html/matomo/tmp
 chmod -R g+w /var/www/html/drupal/web/sites/default/files
 
 mkdir -p /root/bin
