@@ -1,0 +1,24 @@
+To set up matomo on installed Islandora server:
+
+1. In /var/www/html/matomo/config/config.ini.php
+change host = "<servername> to host = "localhost"
+
+2. setup matomo i Drupal config (add http site etc.)
+
+3. secure matomo in apache
+
+<Location /matomo>
+    Deny from all  
+    Allow from 127.0.0.1 
+    Allow from 147.251.0.0/16
+    Allow from 62.197.243.121 
+    Allow from 95.82.184.88
+</Location>
+
+4. setup matomo admin password
+$ php -r 'echo password_hash(md5("changeMe"), PASSWORD_DEFAULT) . "\n";'
+copy the result string (like
+$2y$10$FiknavjTDvUUTSMXGqgmUOfoKq2MkzlYt2/iu6cj02ZyI.40fUArC)
+# mysql matomo
+UPDATE `matomo_user` SET `password` = "$2y$10$FiknavjTDvUUTSMXGqgmUOfoKq2MkzlYt2/iu6cj02ZyI.40fUArC" WHERE `login` = 'admin' AND superuser_access = 1
+
