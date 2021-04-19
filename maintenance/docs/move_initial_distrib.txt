@@ -55,20 +55,3 @@ $ apt-get install ca-certificates-java
 $ snap remove certbot
 $ rm /usr/bin/certbot
 
-
-
-
-*** Islandora etc.
-mkdir /root/export
-drush config:export --destination=/root/export/
-cd /root/export
-sed -i 's/dan-demo/dan-devel/' *
-
-cd /var/www/html/drupal
-drush config:import --source=/root/export/
-grep -r -l --include='*.php' --include='*.yml' --include='*.yaml' 'dan-demo' /var/www/html/ | xargs sed -i 's/dan-demo/dan-devel/'
-grep -l --exclude='*\.log*' --exclude-dir='log' --exclude-dir='.git' --exclude-dir='mail' -r 'dan-demo' /opt | xargs sed -i 's/dan-demo/dan-devel/'
-
-serversearch_api.server.default_solr_server.yml
-
-

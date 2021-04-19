@@ -26,4 +26,5 @@ $ rm -rf roles/external
 
 4<server>. Islandora security setup
 # aptitude install tripwire
-# 
+# cd  /root/distrib/
+# ./islandora-security-setup devel|production
