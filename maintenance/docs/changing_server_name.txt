@@ -1,0 +1,14 @@
+*** edit /etc/hosts
+
+vim /etc/hosts
+
+*** edit Apache files (ServerName, ServerAlias) for islandora
+
+*** set /var/www/html/drupal/web/sites/default/settings.php
+
+$settings['trusted_host_patterns'] = array(
+  '^localhost$',
+  '^dan-demo.phil.muni.cz$',
+  '^arne-novak.phil.muni.cz$',
+  '^arnenovak.phil.muni.cz$',
+);
