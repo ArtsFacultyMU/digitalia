@@ -3,10 +3,11 @@ $ hostname -I
 
 *** Edit these: 
 /etc/hosts 
-/etc/hostname
 /root/bin/firewall
 
+*** set this without domain
 $ hostnamectl set-hostname <hostname>
+
 
 
 *** In /etc/cloud/cloud.cfg set
