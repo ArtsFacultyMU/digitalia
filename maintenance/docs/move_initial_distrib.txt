@@ -32,6 +32,9 @@ $ newaliases
 *** Comment out proxy for apt:
 $ vim /etc/apt/apt.conf.d/90curtin-aptproxy
 
+*** Remove snapd proxy settings (comment out with #):
+/etc/systemd/system/snapd.service.d/snap_proxy.conf
+
 
 *** After reboot:
 
