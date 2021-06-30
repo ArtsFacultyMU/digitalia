@@ -22,6 +22,7 @@ chmod -R o-w /var/www/html/*
 chgrp -R www-data /var/www/html/drupal/web/sites/default/files
 chgrp -R www-data /var/www/html/matomo/tmp
 chmod -R g+w /var/www/html/drupal/web/sites/default/files
+chmod -R g+w /var/www/html/matomo/tmp/
 
 mkdir -p /root/bin
 mkdir -p /root/backup
