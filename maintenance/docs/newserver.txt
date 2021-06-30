@@ -17,8 +17,9 @@ $ cp -r inventory/vagrant inventory/production
 $ ~/bin/islandora-remote-setup
 $ sed -i "s/\(login_.*\)/#\1/" roles/external/Islandora-Devops.fcrepo/tasks/db-mysql.yml
 $ ansible-playbook -i inventory/production playbook.yml -e "islandora_distro=ubuntu/bionic64"
-$ cd islandora-maintanance
-$ scp distrib/* root@<server>:bin/
+$ cd islandora-muni/maintenance
+$ ./build_initial_distrib
+$ scp distrib.tar.bz2 root@<server>:bin/
 
 3a<local>. if reinstall the same playbook, clear cache
 $ rm -rf roles/external
