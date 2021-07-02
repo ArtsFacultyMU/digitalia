@@ -19,7 +19,7 @@ $ sed -i "s/\(login_.*\)/#\1/" roles/external/Islandora-Devops.fcrepo/tasks/db-m
 $ ansible-playbook -i inventory/production playbook.yml -e "islandora_distro=ubuntu/bionic64"
 $ cd islandora-muni/maintenance
 $ ./build_initial_distrib
-$ scp distrib.tar.bz2 root@<server>:bin/
+$ scp distrib.tar.bz2 root@<server>:
 
 3a<local>. if reinstall the same playbook, clear cache
 $ rm -rf roles/external
@@ -27,5 +27,6 @@ $ rm -rf roles/external
 
 4<server>. Islandora security setup
 # aptitude install tripwire
+# tar -jxvf distrib.tar.bz2
 # cd  /root/distrib/
 # ./islandora-security-setup devel|production
