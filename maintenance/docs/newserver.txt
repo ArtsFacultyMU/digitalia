@@ -29,3 +29,19 @@ $ rm -rf roles/external
 # aptitude install tripwire
 # cd  /root/distrib/
 # ./islandora-security-setup devel|production
+
+
+5<server>. Crontab jobs, https, bacula
+see crontab jobs in distrib/islandora-root-crontab and
+distrib/islandora-islandora-crontab, copy those to appropriate user crontabs
+(crontab -e under the user)
+
+
+Production server only:
+https - see actual Let's encrypt documentation 
+
+bacula
+# aptitude install bacula-client bacula-console
+see the distrib/bacula-fd.conf and distrib/bconsole.conf as an examples for
+/etc/bacula/
+for set up backuping contact storage@ics.muni.cz
