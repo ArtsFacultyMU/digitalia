@@ -1,6 +1,8 @@
 *** To get IPTo get IP:
 $ hostname -I
 
+# MIP=`hostname -I`; MNAME='<FQDN_name>'
+
 *** Edit these: 
 /etc/hosts 
 /root/bin/firewall
@@ -43,6 +45,7 @@ $ rm -v /etc/ssh/ssh_host_*
 $ dpkg-reconfigure openssh-server
 
 
+*** Optional rebuild debconf:
 $ dpkg-reconfigure debconf
 $ for pkg in $(dpkg-query --show | awk '{print $1}'); do echo ; echo "--> $pkg" ; echo ; dpkg-reconfigure --frontend=noninteractive --priority=critical $pkg < /dev/null ; done
 
