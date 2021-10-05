@@ -15,9 +15,10 @@ $ git clone https://github.com/Islandora-Devops/islandora-playbook.git
 $ cd islandora-playbook
 $ cp -r inventory/vagrant inventory/production
 $ ~/bin/islandora-remote-setup
+$ ansible-galaxy install -r requirements.yml
 $ sed -i "s/\(login_.*\)/#\1/" roles/external/Islandora-Devops.fcrepo/tasks/db-mysql.yml
 $ ansible-playbook -i inventory/production playbook.yml -e "islandora_distro=ubuntu/bionic64"
-$ cd islandora-muni/maintenance
+$ cd digitalia/maintenance
 $ ./build_initial_distrib
 $ scp distrib.tar.bz2 root@<server>:
 
