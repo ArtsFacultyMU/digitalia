@@ -28,7 +28,7 @@ mkdir -p /root/bin
 mkdir -p /root/backup
 
 cp -v islandora-backup /root/bin/
-cp -v islandora-root-crontab /root/bin/
+#cp -v islandora-root-crontab /root/bin/
 
 if [ $servertype == 'production' ]
 then
