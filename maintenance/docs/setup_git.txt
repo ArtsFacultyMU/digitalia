@@ -1,0 +1,21 @@
+1. copy develeopers ssh private keys to access GitHub to a (new) server with
+islandora to /home/islandora/.ssh/
+
+(the keys should be named "id_rsa_github_<username>")
+
+2. set up git aliases for user islandora according the template:
+
+$ git config --global alias.commit-krejcir '-c user.email="<githubuseremail>" -c
+user.name="<githubusername>" commit'
+
+$ git config --global alias.push-<username> '-c core.sshCommand="ssh -i
+~/.ssh/id_rsa_github_<username>" push'
+
+user.email and user.name are set according to user's GitHub account
+
+
+3. developers may then use git commit-<username> and git push-<username>
+commands on devel servers
+
+4. (optional) set --global config values for the administrator who will be
+mostly responsible for upgrading Drupal 
