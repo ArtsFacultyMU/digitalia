@@ -19,15 +19,15 @@ Matomo HTTPS URL
 
 
 
-3. secure matomo in apache
+3. secure matomo - allow only IP addresses etc.
 
-<Location /matomo>
-    Deny from all  
-    Allow from 127.0.0.1 
-    Allow from 147.251.0.0/16
-    Allow from 62.197.243.121 
-    Allow from 95.82.184.88
-</Location>
+[General]
+force_ssl = 1
+login_allowlist_ip[] = "127.0.0.1"
+login_allowlist_ip[] = "147.251.0.0/16"
+login_allowlist_ip[] = "62.197.243.121"
+login_allowlist_ip[] = "95.82.184.88"
+
 
 4. setup matomo admin password
 $ php -r 'echo password_hash(md5("changeMe"), PASSWORD_DEFAULT) . "\n";'
