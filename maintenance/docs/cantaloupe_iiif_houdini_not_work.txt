@@ -1,0 +1,3 @@
+Tak jsem to vyřešil - problém byl, že dle konfiguráku Cantaloupe prefixoval všechny identifikátory řetězcem "http://dva-devel2.ics.muni.cz/", což nechceme, protože ten identifikátor je z Drupalu volán už jako kompletní URL i s adresou serveru. Takže je třeba v /opt/cantaloupe/cantaloupe.properties nechat bez hodnoty direktivu HttpSource.BasicLookupStrategy.url_prefix
+
+Tak Houdini je zdá se vyřešen, problém byl v přístupových právech ve složkách /var/www/html/Crayfish/Houdini/var/*
