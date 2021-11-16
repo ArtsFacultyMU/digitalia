@@ -1,0 +1,31 @@
+From /etc/mysql/my.cnf remove those vars:
+
+#query_cache_type = 0
+#query_cache_size = 16M
+#query_cache_limit = 1M
+
+#innodb_large_prefix = 1
+#innodb_file_format = barracuda
+#innodb_file_per_table = 1
+#innodb_buffer_pool_size = 256M
+#innodb_log_file_size = 64M
+#innodb_log_buffer_size = 8M
+#innodb_flush_log_at_trx_commit = 1
+#innodb_lock_wait_timeout = 50
+
+
+Upgrade MySQL Java driver:
+download from https://dev.mysql.com/downloads/connector/j/
+
+platform independent .zip
+rozbalit, nakopirovat .jar do /var/lib/tomcat9/webapps/fcrepo/WEB_INF/lib
+stary driver udelat DISABLED (prejmenovat na <driver>.jar.DISABLED)
+restart Tomcat
+
+dumpnout databazi
+dropnout databazi fcrepo
+resatornout databazi fcrepo
+nastavit zpet prava
+GRANT USAGE ON *.* TO `fcrepo`@`%`                 |
+GRANT ALL PRIVILEGES ON `fcrepo`.* TO `fcrepo`@`%`
+
