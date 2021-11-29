@@ -16,5 +16,5 @@ tar -cjf $BACKUP_DIR/drupal-$(date '+%Y%m%d').sql.tar.bz2 $BACKUP_DIR/drupal-$(d
 
 rsync -a --delete --exclude='drupal/vendor/' $DRUPAL_DIR $BACKUP_DIR
 
-tar --exclude-vcs-ignores --exclude=/var/www/html/drupal/web/sites/default/files -cjf $BACKUP_DIR/www-$(date "+%Y%m%d").tar.bz2 /var/www/html/ 
+tar --exclude-vcs-ignores --exclude='/var/www/html/drupal/web/sites/default/files/*' --esclude='/var/www/html/drupal/web/migrate/data/*' -cjf $BACKUP_DIR/www-$(date "+%Y%m%d").tar.bz2 /var/www/html/ 
 
