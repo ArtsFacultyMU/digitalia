@@ -1,0 +1,21 @@
+In general:
+ansible all -i "<ip_address>" -u root -m ansible.builtin.hostname -a
+"name=<new_name_FQDN>"
+
+for example: 
+ansible all -i "147.251.6.18," -u root -m ansible.builtin.hostname -a "name=historicky.archiv.muni.cz"
+
+alternatively file with playbook can be used:
+
+---
+- hosts: all
+
+
+tasks:
+- name: Set hostname in /etc/hostname
+  ansible.builtin.hostname:
+    name: historicky.archiv.muni.cz
+
+and then call
+
+ansible-playbook playbook.yml
