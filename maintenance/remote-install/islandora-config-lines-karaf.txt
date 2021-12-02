@@ -1,5 +1,5 @@
  
- alpaca_settings:
+alpaca_settings:
   - pid: ca.islandora.alpaca.http.client
     settings:
       token.value: changeme
@@ -25,7 +25,7 @@
       milliner.baseUrl: http://example.org/milliner/
       gemini.baseUrl: http://example.org/gemini/
 
- alpaca_blueprint_settings:
+alpaca_blueprint_settings:
   - pid: ca.islandora.alpaca.connector.houdini
     in_stream: activemq:queue:islandora-connector-houdini
     derivative_service_url: http://example.org/houdini/convert
