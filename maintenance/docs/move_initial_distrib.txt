@@ -7,8 +7,8 @@ $ hostname -I
 /etc/hosts 
 /root/bin/firewall
 
-*** set this without domain
-$ hostnamectl set-hostname <hostname>
+#*** set this without domain
+#$ hostnamectl set-hostname <hostname>
 
 
 
@@ -41,8 +41,8 @@ $ vim /etc/apt/apt.conf.d/90curtin-aptproxy
 *** After reboot:
 
 *** SSH server keys update:
-$ rm -v /etc/ssh/ssh_host_*
-$ dpkg-reconfigure openssh-server
+#$ rm -v /etc/ssh/ssh_host_*
+#$ dpkg-reconfigure openssh-server
 
 
 *** Optional rebuild debconf:
@@ -51,14 +51,14 @@ $ for pkg in $(dpkg-query --show | awk '{print $1}'); do echo ; echo "--> $pkg" 
 
 
 *** Optional if Islandora was already installed:
-$ update-ca-certificates
-$ dpkg --purge --force-depends ca-certificates-java
-$ apt-get install ca-certificates-java
+#$ update-ca-certificates
+#$ dpkg --purge --force-depends ca-certificates-java
+#$ apt-get install ca-certificates-java
 
 *** Edit sites and enable/disable:
-/etc/apache2/
+#/etc/apache2/
 
 *** If Let's Encrypt was installed using snap:
-$ snap remove certbot
-$ rm /usr/bin/certbot
+#$ snap remove certbot
+#$ rm /usr/bin/certbot
 
