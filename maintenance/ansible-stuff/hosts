@@ -1,0 +1,5 @@
+[apt]
+# here should be set a server SSH access 
+#127.0.0.1 ansible_connection=ssh ansible_port=2022 ansible_ssh_user=ansible
+#147.251.4.115 ansible_connection=ssh ansible_port=22 ansible_ssh_user=root
+127.0.0.1 ansible_connection=ssh ansible_port=3022 ansible_ssh_user=ansible
