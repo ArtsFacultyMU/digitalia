@@ -1,0 +1,101 @@
+---
+- name: Set new hostname in various places
+  hosts: all
+  remote_user: root
+  vars:
+    - ipv4: '{{ ansible_default_ipv4.address }}'
+    - old_hostname: '{{ ansible_hostname }}'
+    - old_fqdn: '{{ ansible_fqdn }}'
+    - new_hostname: 'cinematicbrno'
+    - new_fqdn: 'cinematicbrno.phil.muni.cz'
+  tasks:
+    - name: Print debug info
+      ansible.builtin.debug:
+        var: ipv4, old_hostname, old_fqdn, new_hostname, new_fqdn
+
+    - name: Set new hostname in /etc/hostname
+      ansible.builtin.hostname:
+        name: '{{ new_hostname }}'
+      notify:
+        - Hostname changed
+
+    - name: Set new IP in /root/bin/firewall
+      ansible.builtin.lineinfile:
+        path: /root/bin/firewall
+        regexp: '^\s*export ip_server='
+        line: 'export ip_server={{ ipv4 }}'
+        backup: yes
+      notify:
+        - Firewall changed
+
+    - name: Set new FQDN in /etc/mailname
+      ansible.builtin.replace:
+        path: /etc/mailname
+        regexp: '^.+'
+        replace: '{{ new_fqdn }}'
+      notify:
+        - Mailname changed
+
+    - name: Set myhostname in /etc/postfix/main.cf
+      ansible.builtin.lineinfile:
+        path: /etc/postfix/main.cf
+        regexp: '^\s*myhostname\s*=\s*'
+        line: 'myhostname = {{ new_fqdn }}'
+        backup: yes
+      notify:
+        - Postfix changed
+     
+    - name: Set mydestination in /etc/postfix/main.cf
+      ansible.builtin.lineinfile:
+        path: /etc/postfix/main.cf
+        regexp: '^\s*mydestination\s*=\s*'
+        line: 'mydestination = $myhostname, {{ new_hostname }}, localhost'
+        backup: yes
+      notify:
+        - Postfix changed
+          
+    - name: Disable APT proxy
+      ansible.builtin.replace:
+        path: /etc/apt/apt.conf.d/90curtin-aptproxy
+        regexp: '^\s*(Acquire::https?::Proxy.*)$'
+        replace: '#\1'
+        backup: yes
+
+    - name: Disable snap proxy
+      ansible.builtin.replace:
+        path: /etc/systemd/system/snapd.service.d/snap_proxy.conf
+        regexp: '^\s*(Environment="HTTPS?_PROXY.*)$'
+        replace: '#\1'
+        backup: yes
+
+  handlers:
+     - name: Hostname changed
+       shell:
+         cmd: rm -v /etc/ssh/ssh_host_* && dpkg-reconfigure openssh-server
+         #warn: false
+       #notify: Debug info
+     # ansible.builtin.reboot:
+     # ansible.builtin.debug:
+        #msg: 'Time to reboot...'
+
+    #- name: Debug info
+    #ansible.builtin.debug:
+        #msg: 'Debug called'
+
+
+     - name: Mailname changed
+       command:
+         cmd: newaliases
+
+     - name: Firewall changed
+       ansible.builtin.systemd:
+         name: firewall.service
+         enabled: yes
+         state: restarted
+
+     - name: Postfix changed
+       ansible.builtin.systemd:
+         name: postfix.service
+         enabled: yes 
+         state: restarted
+

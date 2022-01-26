@@ -7,7 +7,7 @@ t
 8e
 w
 pvcreate /dev/sdb1
-vgcreate vgbackup /dev/sdb1
-lvcreate -l 100%FREE -n lvbackup vgbackup
-mkfs -t ext4 /dev/vgbackup/lvbackup
+vgcreate vgdata /dev/sdb1
+lvcreate -l 100%FREE -n lvdata vgdata
+mkfs -t ext4 /dev/vgdata/lvdata
 blkid

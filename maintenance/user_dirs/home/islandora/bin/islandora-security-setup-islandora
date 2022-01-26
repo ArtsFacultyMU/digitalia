@@ -4,6 +4,9 @@ COMPOSER_BIN=/usr/local/bin/composer
 DRUSH_BIN=/usr/local/bin/drush
 DRUPAL_DIR=/var/www/html/drupal
 
+echo "" >> ~/.bashrc
+echo "alias cddrupal='cd $DRUPAL_DIR'" >> ~/.bashrc
+
 $COMPOSER_BIN --working-dir=${DRUPAL_DIR} self-update --update-keys
 
 $COMPOSER_BIN --working-dir=${DRUPAL_DIR} require 'drupal/security_review'

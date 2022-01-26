@@ -1,3 +1,18 @@
+Change hostname via prepared playbook set_hostname.yml
+------------------------------------------------------
+
+Set ip in "hosts" or give it as a cli param:
+-i "147.251.6.18,"
+
+edit playbook and set 
+new_hostname: 'debian-test'
+new_fqdn: 'debian-test.muni.cz'
+
+ansible-playbook -i "147.251.6.18," set_hostname.yml
+
+
+This is just one plugin, that changes hostname:
+-----------------------------------------------
 In general:
 ansible all -i "<ip_address>" -u root -m ansible.builtin.hostname -a
 "name=<new_name_FQDN>"
