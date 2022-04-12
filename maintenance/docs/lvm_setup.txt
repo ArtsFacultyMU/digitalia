@@ -11,3 +11,16 @@ vgcreate vgdata /dev/sdb1
 lvcreate -l 100%FREE -n lvdata vgdata
 mkfs -t ext4 /dev/vgdata/lvdata
 blkid
+
+fdisk /dev/sdc
+n
+<enter>
+<enter>
+<enter>
+t
+8e
+w
+pvcreate /dev/sdb1
+vgextend vgdata /dev/sdc1
+lvextend -l +100%FREE /dev/vgdata/lvdata
+resize2fs /dev/mapper/vgdata-lvdata
