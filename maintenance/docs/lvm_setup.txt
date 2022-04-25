@@ -20,7 +20,7 @@ n
 t
 8e
 w
-pvcreate /dev/sdb1
+pvcreate /dev/sdc1
 vgextend vgdata /dev/sdc1
 lvextend -l +100%FREE /dev/vgdata/lvdata
 resize2fs /dev/mapper/vgdata-lvdata
