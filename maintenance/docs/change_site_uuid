@@ -1,0 +1,8 @@
+source site:
+
+drush config-get "system.site" uuid
+
+
+dest site:
+
+drush cset system.site uuid <uuid> -y
