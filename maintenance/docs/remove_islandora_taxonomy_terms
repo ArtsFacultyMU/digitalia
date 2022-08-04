@@ -1,0 +1,9 @@
+drush entity:delete taxonomy_term --bundle=islandora_models
+
+drush entity:delete taxonomy_term --bundle=islandora_media_use
+
+drush entity:delete taxonomy_term --bundle=resource_types
+
+drush entity:delete taxonomy_term --bundle=islandora_display
+
+drush entity:delete shortcut_set
