@@ -1,0 +1,6 @@
+drush sql-drop -y
+drush sqlc < "dumpedsqlfile"
+
+Dump:
+
+drush sql-dump --result-file="dumpedsqlfile"
