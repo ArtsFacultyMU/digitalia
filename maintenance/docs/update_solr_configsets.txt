@@ -1,0 +1,7 @@
+- stiahnut config.zip pre Solr server (admin/config/search/search-api - Solr server - Get config.zip)
+
+- unzip do /var/solr/data/ISLANDORA/conf	
+
+- restart Solr (systemctl restart solr.service)
+
+
