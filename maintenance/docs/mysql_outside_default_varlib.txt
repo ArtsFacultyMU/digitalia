@@ -1,0 +1,12 @@
+systemctl stop mysql
+
+# move mysql data dir
+mv /var/lib/mysql /data
+
+# edit apparmor
+vim /etc/apparmor.d/tunables/alias
+# put this inside this file line bellow
+alias /var/lib/mysql/ -> /data/mysql/,
+
+systemctl restart apparmor
+systemctl start mysql
