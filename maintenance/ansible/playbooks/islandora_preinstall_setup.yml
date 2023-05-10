@@ -1,0 +1,18 @@
+---
+- name: Islandora preinstallation set up
+  # this playbook should be run on server _before_ installing Islandora via official playbook
+  hosts: all
+
+  tasks:
+    - name: Create islandora user
+      ansible.builtin.user:
+        name: islandora
+        password: "!"
+
+    - name: Copy ssh key
+      ansible.posix.authorized_key:
+        user: islandora
+        state: present
+        exclusive: true
+        key: "{{ lookup('file', '/home/krejvl/.ssh/id_rsa.pub') }}"
+
