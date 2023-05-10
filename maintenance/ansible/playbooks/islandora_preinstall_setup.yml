@@ -8,11 +8,18 @@
       ansible.builtin.user:
         name: islandora
         password: "!"
+        shell: "/bin/bash"
 
+
+    # needs collection ansible.posix
+    # install via ansible-galaxy collection install ansible.posix
+    # see https://docs.ansible.com/ansible/latest/collections/ansible/posix/authorized_key_module.html
     - name: Copy ssh key
       ansible.posix.authorized_key:
         user: islandora
         state: present
         exclusive: true
-        key: "{{ lookup('file', '/home/krejvl/.ssh/id_rsa.pub') }}"
-
+          #        key: "{{ lookup('file', '/home/krejvl/.ssh/id_rsa.pub') }}"
+        key: '{{ item }}'
+      with_file:
+        - "{{ ansible_ssh_private_key_file }}.pub"
