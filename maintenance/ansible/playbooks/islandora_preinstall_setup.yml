@@ -2,12 +2,14 @@
 - name: Islandora preinstallation set up
   # this playbook should be run on server _before_ installing Islandora via official playbook
   hosts: all
+  remote_user: root
 
   tasks:
     - name: Create islandora user
       ansible.builtin.user:
         name: islandora
-        password: "!"
+        password: "{{ islandora_password | password_hash('sha512', 'mysecretsalt') }}"
+        groups: islandora,sudo
         shell: "/bin/bash"
 
 
