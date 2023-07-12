@@ -1,3 +1,6 @@
+How to set up LVM on added disk
+-------------------------------
+
 fdisk /dev/sdb
 n
 <enter>
@@ -12,6 +15,8 @@ lvcreate -l 100%FREE -n lvdata vgdata
 mkfs -t ext4 /dev/vgdata/lvdata
 blkid
 
+How to extend LVM by adding another disk
+----------------------------------------
 fdisk /dev/sdc
 n
 <enter>
@@ -24,3 +29,8 @@ pvcreate /dev/sdc1
 vgextend vgdata /dev/sdc1
 lvextend -l +100%FREE /dev/vgdata/lvdata
 resize2fs /dev/mapper/vgdata-lvdata
+
+How to extend Ubuntu default LVM
+--------------------------------
+lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
+resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
