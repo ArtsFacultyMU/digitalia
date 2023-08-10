@@ -34,3 +34,8 @@ How to extend Ubuntu default LVM
 --------------------------------
 lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
 resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+
+
+How to extend LVM by extending disk
+-----------------------------------
+Just add new partition and add it as a new physical volume.
