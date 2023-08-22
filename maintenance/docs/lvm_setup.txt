@@ -15,6 +15,10 @@ lvcreate -l 100%FREE -n lvdata vgdata
 mkfs -t ext4 /dev/vgdata/lvdata
 blkid
 
+for bigger disks:
+parted -s /dev/sdd mklabel gpt unit mib mkpart primary 1 100% && set 1 lvm on
+
+
 How to extend LVM by adding another disk
 ----------------------------------------
 fdisk /dev/sdc
