@@ -8,7 +8,10 @@ https://certbot.eff.org/lets-encrypt/ubuntubionic-apache
 # snap install core; snap refresh core
 # apt-get remove certbot
 # snap install --classic certbot
-# certbot --apache
+
+$ ansible-playbook --limit='' playbooks/letsencrypt.yml
+
+# certbot --apache --pre-hook "/etc/letsencrypt/renewal-hooks/pre/pre_renewal.sh" --post-hook "/etc/letsencrypt/renewal-hooks/post/post_renewal.sh"
 # a2enmod proxy; a2enmod headers; a2enmod proxy_http
 
 Edit /etc/apache2/sites-enabled/islandora-le-ssl.conf:
