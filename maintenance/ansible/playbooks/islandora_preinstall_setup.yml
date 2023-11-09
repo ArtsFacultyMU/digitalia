@@ -1,4 +1,8 @@
 ---
+# DEPRECATED: the actual playbook for islandora preinstall has been moved to the 
+# https://github.com/ArtsFacultyMU/digitalia-ansible repository
+# check then documentation on 
+# https://ucnmuni.sharepoint.com/:w:/r/teams/dariah-ffmu/Sdilene%20dokumenty/08_INFRASTRUKTURA%20DIGITALIA/Digitalia_infrastructure_maintenance_manual.docx?d=w1ebbde32e1164393951b4e6976e6bd73&csf=1&web=1&e=YUY6xq
 - name: Islandora preinstallation set up
   # this playbook should be run on server _before_ installing Islandora via official playbook
   hosts: all
