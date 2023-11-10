@@ -1,5 +1,7 @@
-Release firewall ports 80 and 443, the rest stays accessible from the MUNI
-network only.
+At production servers, release firewall ports 80 and 443, the rest stays accessible from the MUNI network only.
+
+At devel servers, the pre- and post-hooks scripts has to be installed (via
+Ansible, see ansible-playbook --limit='' playbooks/letsencrypt.yml.)
 
 
 HTTP Let's Encrypt (if getting forbidden, check
