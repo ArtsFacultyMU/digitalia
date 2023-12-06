@@ -1,0 +1,47 @@
+At production servers, release firewall ports 80 and 443, the rest stays accessible from the MUNI network only.
+
+At devel servers, the pre- and post-hooks scripts has to be installed (via
+Ansible, see ansible-playbook --limit='' playbooks/letsencrypt.yml.)
+
+
+HTTP Let's Encrypt (if getting forbidden, check
+/etc/systemd/system/snapd.service.d/snap_proxy.conf)
+https://certbot.eff.org/lets-encrypt/ubuntubionic-apache
+# aptitude install snapd
+# snap install core; snap refresh core
+# apt-get remove certbot
+# snap install --classic certbot
+
+$ ansible-playbook --limit='' playbooks/letsencrypt.yml
+
+# certbot --apache --pre-hook "/etc/letsencrypt/renewal-hooks/pre/pre_renewal.sh" --post-hook "/etc/letsencrypt/renewal-hooks/post/post_renewal.sh"
+# a2enmod proxy; a2enmod headers; a2enmod proxy_http
+
+Edit /etc/apache2/sites-enabled/islandora-le-ssl.conf:
+  RequestHeader set X-Forwarded-Proto HTTPS
+  RequestHeader set X-Forwarded-Port 443
+  RequestHeader set X-Forwarded-Path /
+
+  ProxyRequests Off
+  AllowEncodedSlashes NoDecode
+  ProxyPass "/cantaloupe/iiif/2" "http://localhost:8080/cantaloupe/iiif/2" nocanon
+  ProxyPassReverse "/cantaloupe/iiif/2" "http://localhost:8080/cantaloupe/iiif/2"
+  ProxyPass "/iiif/2" "http://localhost:8080/cantaloupe/iiif/2" nocanon
+  ProxyPassReverse "/iiif/2" "http://localhost:8080/cantaloupe/iiif/2"
+  ProxyPassReverseCookiePath /cantaloupe/iiif/2 /iiif/2
+  ProxyPassReverseCookieDomain localhost:8080 projectiles.phil.muni.cz
+  ProxyPreserveHost on
+
+
+
+
+Edit /var/www/html/drupal/web/sites/default/settings.php and remove "http://"
+from $settings['flysystem'] = [ ... 'root' => '...' ]
+
+Change https://projectiles.phil.muni.cz/admin/config/media/openseadragon
+and set up URL to
+
+https://projectiles.phil.muni.cz/iiif/2
+
+
+
