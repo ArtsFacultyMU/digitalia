@@ -12,7 +12,7 @@ MAILS="kic_admins@ics.muni.cz,strakosova@phil.muni.cz"
 today=`date +%Y-%m-%d.%H:%M:%S`
 
 COMPOSER_BIN=/usr/local/bin/composer
-DRUSH_BIN=/usr/local/bin/drush
+DRUSH_BIN=/var/www/html/drupal/vendor/drush/drush/drush
 DRUPAL_DIR=/var/www/html/drupal
 LOGFILE=/home/islandora/logs/update-$(date '+%Y-%m-%d_%T').log
 

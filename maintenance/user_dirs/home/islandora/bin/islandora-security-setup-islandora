@@ -1,7 +1,7 @@
 #!/bin/bash
 
 COMPOSER_BIN=/usr/local/bin/composer
-DRUSH_BIN=/usr/local/bin/drush
+DRUSH_BIN=/var/www/html/drupal/vendor/drush/drush/drush
 DRUPAL_DIR=/var/www/html/drupal
 
 echo "" >> ~/.bashrc
@@ -18,4 +18,4 @@ $DRUSH_BIN -y --root=${DRUPAL_DIR} cset user.flood ip_limit 3
 $DRUSH_BIN -y --root=${DRUPAL_DIR} cset user.flood user_limit 3 
 $DRUSH_BIN -y --root=${DRUPAL_DIR} cset user.settings register admin_only 
 
-$DRUSH_BIN -y --root=${DRUPAL_DIR} pmu simpletest 
+#$DRUSH_BIN -y --root=${DRUPAL_DIR} pmu simpletest 
