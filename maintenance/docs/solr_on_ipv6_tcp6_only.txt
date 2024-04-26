@@ -1,0 +1,4 @@
+If solr server listens on IPv6 (tcp6) only (netstat -tulpn | grep 8983), then
+insert into /etc/default/solr.in.sh:
+
+SOLR_OPTS="$SOLR_OPTS -Djava.net.preferIPv4Stack=true"
