@@ -10,3 +10,4 @@ Module                  | What it is used for | Platforms
 [Configuration Manager (Core)](https://www.drupal.org/docs/8/core/modules/config) | Edit configuration files from the user interface (e.g. when testing migrations) | Herbaria
 [Migrate Plus](https://www.drupal.org/project/migrate_plus) & [Migrate Tools](https://www.drupal.org/project/migrate_tools) | Managing migrations including basic UI | Herbaria
 [Entity Reference Exposed Filters](https://www.drupal.org/project/entity_reference_exposed_filters) | Expose title of entity reference in an exposed filter (instead of node id) | Herbaria
+[Metatag](https://www.drupal.org/project/metatag) | oai_dc metadata mappings | all
