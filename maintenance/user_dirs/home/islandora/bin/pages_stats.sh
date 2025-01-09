@@ -17,12 +17,12 @@ do
         if [ $? -eq 0 ]
         then
                 documents=$(( $documents + 1 ))
-		            curl -o $TMPFILE ${PREFIX_URL}${line}
+		            curl -s -o $TMPFILE ${PREFIX_URL}${line}
                 cpages=`pdfinfo $TMPFILE | grep 'Pages:' | cut -c 17- | awk '{s+=$1} END {print s}'`
                 if [ "$cpages" != "" ]
                 then
                         pages=$(( $cpages + $pages ))
-												echo "$line $documents $pages" >> $COUNT_FILE 
+												echo "$line $documents $pages" | tee -a $COUNTFILE 
                 fi
                 rm -f $TMPFILE
         fi
