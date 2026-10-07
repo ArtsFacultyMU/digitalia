@@ -1,14 +1,74 @@
 *** edit /etc/hosts
 
 vim /etc/hosts
+$ hostnamectl set-hostname <hostname>
+
+*** Edit: 
+/etc/mailname
+$ newaliases
+
+*** Edit:
+/etc/postfix/main.cf
+
+*** Optional: Comment out proxy for apt:
+$ vim /etc/apt/apt.conf.d/90curtin-aptproxy
+
+*** Optional: Remove snapd proxy settings (comment out with #):
+/etc/systemd/system/snapd.service.d/snap_proxy.conf
 
 *** edit Apache files (ServerName, ServerAlias) for islandora
 
+*** Islandora specific stuff follows:
 *** set /var/www/html/drupal/web/sites/default/settings.php
 
 $settings['trusted_host_patterns'] = array(
   '^localhost$',
-  '^dan-demo.phil.muni.cz$',
-  '^arne-novak.phil.muni.cz$',
-  '^arnenovak.phil.muni.cz$',
+  '^xyz.muni.cz$',
 );
+
+$ drush config:set -y search_api.server.default_solr_server backend_config.connector_config.host '<hostname>.phil.muni.cz'
+
+$ drush config:set -y openseadragon.settings iiif_server 'http://<hostname>.phil.muni.cz:8080/cantaloupe/iiif/2'
+
+$ drush config:set -y islandora_iiif.settings iiif_server 'http://<hostname>.phil.muni.cz:8080/cantaloupe/iiif/2'
+
+$ drush config:set -y islandora.settings broker_url 'tcp://<hostname>.phil.muni.cz:61613'
+
+*** then inside /var/www/html/Crayfish/ check these:
+./Recast/config/packages/crayfish_commons.yaml
+./Recast/config/services.yaml
+./Houdini/config/packages/crayfish_commons.yaml
+./Hypercube/config/packages/crayfish_commons.yaml
+./Milliner/config/services.yaml
+./Homarus/config/packages/crayfish_commons.yaml
+
+or by 
+$ find . -name '*.yaml' -type f -exec sed -i 's/corpora-devel\.phil\.muni\.cz/digilib.muni.cz/g' {} +
+
+
+*** and the Alpaca
+/opt/alpaca/alpaca.properties
+
+
+
+*** After reboot:
+
+*** SSH server keys update:
+#$ rm -v /etc/ssh/ssh_host_*
+#$ dpkg-reconfigure openssh-server
+
+
+*** Optional rebuild debconf:
+$ dpkg-reconfigure debconf
+$ for pkg in $(dpkg-query --show | awk '{print $1}'); do echo ; echo "--> $pkg" ; echo ; dpkg-reconfigure --frontend=noninteractive --priority=critical $pkg < /dev/null ; done
+
+
+*** Optional if Islandora was already installed:
+#$ update-ca-certificates
+#$ dpkg --purge --force-depends ca-certificates-java
+#$ apt-get install ca-certificates-java
+
+*** If Let's Encrypt was installed using snap:
+#$ snap remove certbot
+#$ rm /usr/bin/certbot
+
