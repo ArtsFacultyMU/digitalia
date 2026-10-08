@@ -1,0 +1,27 @@
+
+
+/etc/profile.d/proxy.sh:
+
+export http_proxy="http://proxy.muni.cz:3128/"
+export https_proxy="http://proxy.muni.cz:3128/"
+export ftp_proxy="http://proxy.muni.cz:3128/"
+export no_proxy="localhost,127.0.0.1,.muni.cz"
+
+
+/etc/apt/apt.conf.d/01proxy:
+
+Acquire::http::Proxy "http://proxy.muni.cz:3128";
+Acquire::https::Proxy "http://proxy.muni.cz:3128";
+
+
+/etc/systemd/system.conf.d/proxy.conf:
+
+[Manager]
+DefaultEnvironment="http_proxy=http://proxy.muni.cz:3128/"
+DefaultEnvironment="https_proxy=http://proxy.muni.cz:3128/"
+DefaultEnvironment="no_proxy=localhost,127.0.0.1,.muni.cz"
+
+
+
+reboot the server.
+
