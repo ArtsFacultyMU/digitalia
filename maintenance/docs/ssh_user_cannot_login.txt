@@ -1,0 +1,7 @@
+debug3: send packet: type 50
+debug2: we sent a publickey packet, wait for reply
+debug3: receive packet: type 51
+
+User mzm not allowed because account is locked
+
+usermod -p '*' mzm
